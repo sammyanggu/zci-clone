@@ -1,0 +1,69 @@
+.take-action {
+  background: $clr-dark-blue;
+  padding: 150px 0;
+  
+  .quote {
+    @include lettre-spacing;
+	font-size: larger;
+  }
+  
+  .attribution {
+    font-style: italic;
+	color: lightblue !important;
+  }
+  
+  .cta-link {
+    background-color: transparent;
+    border-color: $clr-white;
+    color: $clr-white;
+
+    &:hover {
+      background-color: $clr-main;
+      border-color: $clr-main;
+      color: $clr-white;
+    }
+  }
+}
+
+.subscribe {
+  .overlay-color {
+    opacity: 0.75 !important;
+  }
+
+  .section-heading {
+    .section-title {
+      color: $clr-grey;
+    }
+
+    .section-subtitle {
+      color: $clr-grey;
+    }
+
+    .line {
+      background-color: $clr-white;
+    }
+  }
+  
+  .sec-heading {
+    .title {
+      color: $clr-grey;
+    }
+
+    .subtitle {
+      color: $clr-grey;
+    }
+
+    .bottom-line {
+      background-color: $clr-white;
+    }
+  }
+
+  .subscribe-btn {
+    &:hover {
+      background: transparent;
+      color: $clr-white;
+      border-color: $clr-white;
+    }
+  }
+}
+

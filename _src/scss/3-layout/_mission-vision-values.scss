@@ -1,0 +1,88 @@
+.mission-vision-values {
+  
+  .content-block {
+    &:not(:last-child) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  .text-area {
+    position: relative;
+    padding: 3rem 0;
+
+    .sec-heading {
+      margin-bottom: 1.5rem;
+    }
+    
+    .indent {
+      padding-left: 14rem;
+
+      @include screen-md {
+        padding-left: 17rem; // Reduce indent for extra small screens ≤ 575px
+      }
+
+      @include screen-sm {
+        padding-left: 13rem; // Reduce indent for extra small screens ≤ 575px
+      }
+
+      @include screen-xs {
+        padding-left: 7rem; // Reduce indent for extra small screens ≤ 575px
+      }
+    }
+
+    .mission-vision-values-text {
+      font-weight: 400;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+      opacity: 0.75;
+      letter-spacing: 0.5px;
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+
+    .cta-area {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .img-area {
+    display: block;
+    width: 100%;
+    transform: scaleX(1 * $x-axe-direction);
+  
+    &:hover {
+      transform: scale(1.1); // slight zoom on hover
+    }
+    
+    .img-1, .img-2 {
+      max-width: 29rem;
+      padding: 2rem;
+
+      @include screen-md {
+        max-width: 27rem; // Further reduce size for screens ≤ 575px
+        display: block; // Ensure it's treated as a block element
+        margin: 0 auto; // Centers it horizontally
+        //padding: 1.5rem 0;
+      }
+    
+      @include screen-sm {
+        max-width: 24rem; // Further reduce size for screens ≤ 575px
+        display: block; // Ensure it's treated as a block element
+        margin: 0 auto; // Centers it horizontally
+      }
+
+      @include screen-xs {
+        max-width: 18rem; // Reduce size for screens ≤ 575px
+        display: block; // Ensure it's treated as a block element
+        margin: 0 auto; // Centers it horizontally
+      }
+    }
+    
+  }
+
+}

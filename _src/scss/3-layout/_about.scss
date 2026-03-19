@@ -1,0 +1,99 @@
+.about {
+  .content-block {
+    &:not(:last-child) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  .text-area {
+    position: relative;
+    padding: 3rem 0;
+
+    .sec-heading {
+      margin-bottom: 1.5rem;
+    }
+
+    .about-text {
+      font-weight: 400;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+      opacity: 0.75;
+      letter-spacing: 0.5px;
+      text-align: justify;
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+
+    .cta-area {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .signature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .signature-img {
+          max-width: 200px;
+          width: 200px;
+          height: 70px;
+          background-image: url("../assets/images/about/signature-dark.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+
+          @include screen-xs {
+            max-width: 150px;
+            max-height: 50px;
+          }
+        }
+
+        .signature-name {
+          display: block;
+          color: $clr-main;
+          margin-top: -0.5rem;
+          text-transform: capitalize;
+
+          @include screen-xs {
+            font-size: 0.85rem;
+          }
+        }
+      }
+    }
+  }
+
+  .img-area {
+    display: block;
+    max-width: 29rem; // Default size on large screens
+    width: 100%; // Ensures it scales down to fit its container
+    height: auto; // Maintains aspect ratio
+    @include ma-transition;
+
+    &:hover {
+      transform: scale(1.1); // slight zoom on hover
+    }
+
+    @include screen-md {
+      max-width: 27rem; // Reduce size for screens ≤ 767px
+      display: block; // Ensure it's treated as a block element
+      margin: 0 auto; // Centers it horizontally
+    }
+
+    @include screen-sm {
+      max-width: 25rem; // Reduce size for screens ≤ 767px
+      display: block; // Ensure it's treated as a block element
+      margin: 0 auto; // Centers it horizontally
+    }
+
+    @include screen-xs {
+      max-width: 18rem; // Reduce size for screens ≤ 575px
+      display: block; // Ensure it's treated as a block element
+      margin: 0 auto; // Centers it horizontally
+    }
+  }
+}
+

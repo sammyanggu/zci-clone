@@ -1,0 +1,158 @@
+%bg-img-section {
+  .overlay-photo-image-bg,
+  .overlay-color {
+    #{$end-direction}: 0;
+    #{$start-direction}: auto;
+
+    @include screen-md {
+      width: 100%;
+    }
+  }
+
+  .overlay-color {
+    opacity: 0.65 !important;
+  }
+}
+
+%testimonial-content {
+  .testimonial-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    .customer-img {
+      img {
+        //width: 10rem;
+        //height: 20rem;
+        border-radius: 5%;
+        border: 3px solid $clr-main;
+        margin-bottom: 2rem;
+        
+        
+
+        display: block;
+        max-width: 29rem; // Default size on large screens
+        width: 100%; // Ensures it scales down to fit its container
+        height: auto; // Maintains aspect ratio
+        @include ma-transition;
+
+        &:hover {
+          transform: scale(1.1); // slight zoom on hover
+        }
+
+        @include screen-sm {
+          max-width: 20rem; // Reduce size for screens ≤ 767px
+        }
+
+        @include screen-xs {
+          max-width: 12rem; // Further reduce size for screens ≤ 575px
+        }
+        
+      }
+    }
+  }
+
+  .content {
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  .testimonial-text {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.7;
+    font-style: italic;
+    color: $clr-white;
+    padding: 0;
+    margin: 0;
+
+    @include screen-md {
+      font-size: 1.15rem;
+    }
+  }
+
+  .customer-testimonial {
+    position: relative;
+    width: 65%;
+    margin: 0 auto;
+
+    @include screen-lg {
+      width: 80%;
+    }
+    @include screen-xs {
+      width: 90%;
+    }
+  }
+
+  .customer-details {
+    display: inline-block;
+
+    .customer-name,
+    .customer-role {
+      /*text-transform: capitalize;*/
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .customer-name {
+      font-size: 1.25rem;
+      color: $clr-white;
+    }
+
+    .customer-role {
+      font-size: 1rem;
+      color: $clr-white;
+      opacity: 0.75;
+    }
+  }
+}
+
+.testimonials {
+  @extend %testimonial-content;
+
+  //custom positions to testimonials slider arrows
+  .swiper-button-prev,
+  .swiper-button-next {
+    @include adding-arrows-styling;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba($clr-white-rgb, 0.25);
+    margin-top: 0;
+  }
+
+  .swiper-button-prev {
+    #{$start-direction}: 0;
+    #{$end-direction}: auto;
+  }
+
+  .swiper-button-next {
+    #{$end-direction}: 0;
+    #{$start-direction}: auto;
+  }
+}
+
+// Define a variable for the modal title color
+$modal-title-color: rgb(0, 0, 128);
+$modal-title-bg: rgb(255, 255, 255); // Optional background color
+
+#certificateModal {
+  .modal-title {
+    color: $modal-title-color;
+    font-weight: bold;
+    background-color: $modal-title-bg;
+    padding: 0.5rem;
+    white-space: normal;  // Allow multi-line wrapping
+    line-height: 1.4;     // Improve readability
+    text-align: center;   // Center the text within the title container
+    display: block;       // Ensure the title takes full width
+    width: 100%;          // Make sure the container spans the entire available width
+    margin: 0 auto;       // Center the container horizontally if necessary
+  }
+}

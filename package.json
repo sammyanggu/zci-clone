@@ -1,0 +1,20 @@
+{
+  "name": "zconnect",
+  "version": "1.0.0",
+  "main": "index.php",
+  "scripts": {
+    "build:scss": "sass _src/scss/main-LTR.scss:css/main-LTR.css",
+    "watch:scss": "nodemon -e scss -x \"npm run build:scss\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.77.6"
+  },
+  "dependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

@@ -1,0 +1,368 @@
+%services-rules {
+  .service-box {
+    position: relative;
+    padding: 4rem 2rem;
+    @include ma-transition(all, 0.3s);
+    z-index: 0;
+  }
+
+  .service-card {
+    overflow: hidden;
+  }
+
+  .service-icon {
+    margin-bottom: 1rem;
+    @include ma-transition(all, 0.5s);
+  }
+
+  .font-icon {
+    display: block;
+    line-height: 3rem;
+    font-size: 3rem;
+    color: $clr-main;
+    transform-origin: center;
+    @include ma-transition(all, 0.3s);
+  }
+
+  .service-num {
+    font-size: 5rem;
+    font-weight: 800;
+    position: absolute;
+    top: 1rem;
+    #{$end-direction}: 2rem;
+    color: $clr-white;
+    opacity: 0;
+    line-height: 1;
+  }
+
+  .img-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .service-content {
+    margin-bottom: 1.5rem;
+    
+    .partner-logos-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem; // spacing between images
+      
+      .partner-logo {
+        flex: 1 1 calc(33.33% - 1rem); // each logo takes 1/3 of the row minus the gap
+        max-width: 5rem; // maximum size of the image
+        min-width: 3rem; // minimum size of the image
+        aspect-ratio: 1 / 1; // ensures images are square
+        object-fit: contain; // keeps the image within its bounding box
+        margin: 0.5rem; // additional margin around each image
+        transition: transform 0.3s ease; // smooth zoom effect on hover
+
+        &:hover {
+          transform: scale(1.1); // slight zoom on hover
+        }
+      }
+    }
+  }
+
+  .service-title {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .service-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0;
+    opacity: 0.85;
+    text-align: justify;
+  }
+
+  &.lifted-up-box {
+    .services-row {
+      @include screen-md {
+        padding: 6rem 0;
+      }
+    }
+
+    .service-box {
+      margin-top: -8rem;
+      @include screen-md {
+        margin-top: 0rem;
+      }
+    }
+  }
+}
+
+.services-boxed {
+  @extend %services-rules;
+
+  .services-row {
+    margin-bottom: 2rem;
+  }
+
+  .service-box {
+    border-radius: 0.5rem;
+    padding: 2rem;
+    border: 1px solid rgba($clr-main-rgb, 0.35);
+    @include ma-box-shadow(0, 0, 10, 0, rgba($clr-dark-blue-rgb, 0.1));
+
+    @include screen-md {
+      padding: 2rem;
+    }
+
+    .read-more {
+      color: $clr-main;
+      border: none;
+      padding: 0;
+    }
+
+    // &:hover {
+    //   &::before {
+    //     #{$start-direction}: 0;
+    //     #{$end-direction}: auto;
+    //     transform: scaleX(1);
+    //     transform-origin: #{$start-direction};
+    //   }
+
+    //   .service-title,
+    //   .service-text,
+    //   .font-icon,
+    //   .read-more {
+    //     color: $clr-white;
+    //   }
+    // }
+
+    // &.featured {
+
+    //   .service-num {
+    //     opacity: 0.3;
+    //   }
+
+    //   .service-title,
+    //   .service-text,
+    //   .font-icon {
+    //     color: $clr-white;
+    //   }
+    // }
+  }
+
+  &.has-dark-bg {
+    background-color: $clr-semi-dark-blue;
+
+    .service-title {
+      color: $clr-white;
+    }
+
+    .service-text {
+      color: $clr-white;
+      opacity: 0.85;
+    }
+  }
+}
+
+.service-single {
+  padding: 8rem 0;
+
+  .service-sidebar {
+    padding-inline-end: 1rem;
+    position: sticky;
+    top: 7.5rem;
+    
+
+    @include screen-md {
+      max-width: 27rem; // Further reduce size for screens ≤ 575px
+      display: block; // Ensure it's treated as a block element
+      margin: 0 auto; // Centers it horizontally
+      padding: 0 0 1.5rem;
+    }
+
+    .sidebar-pane {
+      position: relative;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 0.25rem;
+      background-color: rgba($clr-main-rgb, 0.75);
+      z-index: 0;
+
+      .sidebar-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+        /* text-transform: capitalize; */
+      }
+
+      .list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .list-item {
+        display: flex;
+        align-items: center;
+        padding: 1rem 1.25rem;
+        padding-#{$end-direction}: 0;
+        margin-bottom: 1rem;
+        background: rgba($clr-dark-blue-rgb, 1);
+        color: $clr-white;
+        opacity: 0.65;
+        border-radius: 0.25rem;
+        @include ma-transition(all, 0.3s);
+        .font-icon {
+          color: $clr-white;
+          font-size: 1.5rem;
+          margin-#{$end-direction}: 0.75rem;
+          line-height: 1;
+        }
+        a {
+          position: relative;
+          text-transform: capitalize;
+          width: 100%;
+          color: inherit;
+          display: flex;
+          align-items: center;
+          line-height: 1;
+          font-size: 1.1rem;
+          font-weight: 400;
+          .icon {
+            display: flex;
+            translate: -1rem 0;
+            opacity: 0;
+            @include ma-transition(all, 0.3s);
+          }
+        }
+
+        &:hover,
+        &.active {
+          opacity: 1;
+
+          a {
+            .icon {
+              translate: 1rem 0;
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .sc-list {
+        .sc-item {
+          color: $clr-white;
+          background-color: $clr-dark-blue;
+          opacity: 0.75;
+          .sc-link {
+            color: inherit;
+          }
+          .sc-icon {
+            color: inherit;
+          }
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .service-content-area {
+    margin-bottom: 4rem;
+
+    .part {
+      margin-bottom: 2.5rem;
+    }
+    .featured-img-area {
+      margin-bottom: 2rem;
+      border-radius: 0.25rem;
+      overflow: hidden;
+    }
+    .service-title {
+      text-transform: capitalize;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1.75rem;
+    }
+
+    .service-text {
+      margin-bottom: 2rem;
+      font-size: 1.25rem;
+      opacity: 0.75;
+      text-align: justify;
+    }
+
+    .two-cols-img {
+      margin-bottom: 2rem;
+
+      .img-col {
+        border-radius: 0.25rem;
+        overflow: hidden;
+        img {
+          min-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+// Define a variable for the modal title color
+$modal-title-color: rgb(0, 0, 128);
+$modal-title-bg: rgb(255, 255, 255); // Optional background color
+
+#partnerModal {
+  
+  .modal-dialog {
+    max-width: 65%; // Ensure the modal isn't too wide
+    margin: 1rem auto; // Provide some spacing from the edges of the viewport
+  }
+  
+  .modal-content {
+    max-height: 90vh; // Ensure the modal box doesn't exceed 90% of the viewport height
+    display: flex;
+    flex-direction: column; // Ensure proper layout flow
+  }
+
+  .modal-body {
+    overflow-y: auto; // Enable vertical scrolling for the content
+    flex-grow: 1; // Allow the body to take up remaining space
+    padding: 1rem; // Add some padding for aesthetics
+  }
+  
+  .modal-title {
+    color: $modal-title-color;
+    font-weight: bold;
+    background-color: $modal-title-bg;
+    padding: 0.5rem;
+    white-space: normal;  // Allow multi-line wrapping
+    line-height: 1.4;     // Improve readability
+    text-align: center;   // Center the text within the title container
+    display: block;       // Ensure the title takes full width
+    width: 100%;          // Make sure the container spans the entire available width
+    margin: 0 auto;       // Center the container horizontally if necessary
+  }
+
+  .service-title {
+    color: $modal-title-color;
+    text-transform: capitalize;
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .partner-logo {
+    flex: 1 1 calc(33.33% - 1rem); // each logo takes 1/3 of the row minus the gap
+    max-width: 6rem; // maximum size of the image
+    min-width: 3rem; // minimum size of the image
+    aspect-ratio: 1 / 1; // ensures images are square
+    object-fit: contain; // keeps the image within its bounding box
+    margin: 0.6rem; // additional margin around each image
+    transition: transform 0.3s ease; // smooth zoom effect on hover
+
+    &:hover {
+      transform: scale(1.1); // slight zoom on hover
+    }
+  }
+}

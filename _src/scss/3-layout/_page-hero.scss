@@ -1,0 +1,948 @@
+%hero-title-rules {
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  margin-bottom: 1.75rem;
+  line-height: 1.5;
+
+  .first-word {
+    position: relative;
+  }
+
+  @include screen-lg {
+    font-size: 2rem !important;
+  }
+
+  @include screen-xs {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+  }
+}
+
+%hero-subtitle-rules {
+  // color: $clr-dark-blue;
+  opacity: 0.75;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 25rem;
+
+  @include screen-md {
+    font-size: 0.95rem;
+  }
+}
+
+.hero-social-icons {
+  padding-top: 1.25rem;
+  margin-bottom: 0.75rem;
+  
+  .sc-list .sc-item .sc-link {
+    color: $clr-dark-blue;
+  }
+  .dir-row {
+    .sc-list .sc-item:not(:last-child) {
+      margin-#{$end-direction}: 2rem;
+    }
+  }
+
+  .dir-col {
+    .sc-list .sc-item:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+// Reset positioning for social icons inside content wrapper (slides 2 & 3)
+.hero-social-icons-wrapper .hero-social-icons {
+  position: static !important;
+  top: auto !important;
+  padding-top: 0 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+@include screen-xxl {
+  .swiper-slide.slide-1 .hero-social-icons {
+    position: relative;
+    top: -5rem !important;
+  }
+  .swiper-slide.slide-2 .hero-social-icons {
+    position: relative;
+    top: -4rem !important;
+  }
+  .swiper-slide.slide-3 .hero-social-icons {
+    position: relative;
+    top: -1rem !important;
+  }
+}
+
+@include screen-xl {
+  .swiper-slide.slide-1 .hero-social-icons {
+    position: relative;
+    top: -7rem !important;
+  }
+  .swiper-slide.slide-2 .hero-social-icons {
+    position: relative;
+    top: -7rem !important;
+  }
+  .swiper-slide.slide-3 .hero-social-icons {
+  position: relative;
+  top: -4rem !important;
+  }
+}
+
+@include screen-lg {
+  .swiper-slide.slide-1 .hero-social-icons {
+    position: relative;
+    top: -9rem !important;
+  }
+  .swiper-slide.slide-2 .hero-social-icons {
+    position: relative;
+    top: -6rem !important;
+  }
+  .swiper-slide.slide-3 .hero-social-icons {
+    position: relative;
+    top: -5rem !important;
+  }
+}
+
+@include screen-md {
+  .swiper-slide.slide-1 .hero-social-icons {
+    position: relative;
+    top: -9rem !important;
+  }
+  .swiper-slide.slide-2 .hero-social-icons {
+    position: relative;
+    top: -6rem !important;
+  }
+  .swiper-slide.slide-3 .hero-social-icons {
+    position: relative;
+    top: -4rem !important;
+  }
+}
+
+@include screen-sm {
+  .swiper-slide.slide-1 .hero-social-icons {
+    position: relative;
+    top: 4rem !important;
+  }
+  .swiper-slide.slide-2 .hero-social-icons {
+    position: relative;
+    top: 2.7rem !important;
+  }
+  .swiper-slide.slide-3 .hero-social-icons {
+    position: relative;
+    top: 4rem !important;
+  }
+}
+
+@include screen-xs {
+  .swiper-slide.slide-1 .hero-social-icons {
+    position: relative;
+    top: 1.5rem !important;
+  }
+  .swiper-slide.slide-2 .hero-social-icons {
+    position: relative;
+    top: 3rem !important;
+  }
+  .swiper-slide.slide-3 .hero-social-icons {
+    position: relative;
+    top: 4rem !important;
+  }
+}
+
+
+.page-hero {
+  position: relative;
+  z-index: 0;
+  max-height: 1280px;
+  min-height: unset;
+  padding: 20px 0;
+
+  &.tringle-bg {
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      #{$start-direction}: 0;
+      #{$end-direction}: 0;
+      bottom: -1px;
+      width: 100%;
+      height: 100%;
+
+      clip-path: polygon(50% 100%, 100% 0%, 100% 100%, 0 100%);
+      @if $direction== "rtl" {
+        clip-path: polygon(0 0, 0% 100%, 50% 100%);
+      }
+
+      background: rgba($clr-secondary-rgb, 0.5);
+      @include ma-transition(all, 0.25s);
+    }
+    @include screen-md {
+      &::before {
+        clip-path: polygon(0 100%, 100% 50%, 100% 100%);
+        @if $direction== "rtl" {
+          clip-path: polygon(0% 50%, 0% 100%, 70% 100%);
+        }
+      }
+    }
+  }
+  @include screen-md {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  @media (max-height: 600px) {
+    height: auto;
+  }
+
+  .hero-image-area {
+    position: relative;
+    .hero-img-wrapper img {
+      transform: scaleX(1 * $x-axe-direction);
+    }
+  }
+
+  .hero-text-area {
+    margin-top: 0.5rem;
+    position: relative;
+
+    .logo-img {
+      display: relative;
+      max-width: 15rem; // Default size on large screens
+      width:100%; // Ensures it scales down to fit its container
+      height: auto; // Maintains aspect ratio
+      margin-top: 0.3125rem; // 5px space from social icons
+      margin-bottom: 0.1rem; // Minimal space below logo
+      @include ma-transition;
+
+      &:hover {
+        transform: scale(1.1); // slight zoom on hover
+      }
+
+      @include screen-xxl {
+        max-width: 10rem; // Reduce size for screens ≤ ?
+        margin-top: 0.3125rem; // 5px space from social icons
+        margin-bottom: 0.1rem; // Minimal space below logo
+      }
+
+      @include screen-xl {
+        max-width: 10rem; // Reduce size for screens ≤ ?
+        margin-top: 0.3125rem; // 5px space from social icons
+        margin-bottom: 0.1rem; // Minimal space below logo
+      }
+      
+      @include screen-lg {
+        max-width: 10rem; // Reduce size for screens ≤ ?
+        margin-top: 0.3125rem; // 5px space from social icons
+        margin-bottom: 0.1rem; // Minimal space below logo
+      }
+
+      @include screen-md {
+        max-width: 10rem; // Reduce size for screens ≤ ?
+        margin-top: 0.3125rem; // 5px space from social icons
+        margin-bottom: 0.1rem; // Minimal space below logo
+      }
+
+      @include screen-sm {
+        max-width: 10rem; // Reduce size for screens ≤ 767px
+        margin-top: 0.3125rem; // 5px space from social icons
+        margin-bottom: 0.1rem; // Minimal space below logo
+      }
+
+      @include screen-xs {
+        max-width: 10rem; // Further reduce size for screens ≤ 575px
+        margin-top: 0.3125rem; // 5px space from social icons
+        margin-bottom: 0.1rem; // Minimal space below logo
+      }
+      
+    }
+
+    .hero-title {
+      @extend %hero-title-rules;
+    }
+
+    .hero-subtitle {
+      @extend %hero-subtitle-rules;
+    }
+
+    .hero-title {
+      display: inline-block;
+      position: relative;
+      z-index: 0;
+
+      .heading-brand-name {
+        position: relative;
+        display: inline-block;
+        line-height: 1;
+      }
+
+      .featured-text {
+        font-weight: 700;
+      }
+    }
+
+    &.content-always-light {
+      .hero-title,
+      .hero-subtitle,
+      .slide-title,
+      .slide-subtitle,
+      .hero-social-icons .sc-link {
+        color: $clr-white !important;
+      }
+    }
+  }
+
+  .cta-links-area {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+
+    .cta-link {
+      margin-bottom: 0;
+      margin-#{$end-direction}: 1.5rem;
+      font-size: 1.15rem;
+      min-width: 180px;
+
+      @include screen-md {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+        min-width: auto;
+      }
+
+      &:last-child {
+        margin-#{$end-direction}: 0;
+      }
+    }
+  }
+}
+
+.hero-swiper-slider {
+  padding: 0;
+  background: $clr-dark-blue;
+
+  // to make sure the first letter is always capitalized
+  [data-splitting="chars"] {
+    .word {
+      .char {
+        text-transform: lowercase;
+      }
+    }
+
+    .word .char:first-child {
+      text-transform: uppercase;
+    }
+  }
+
+  .swiper-slide {
+    position: relative;
+    min-width: 100%;
+    min-height: 100vh;
+    padding: 120px 0;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+
+    @media (max-height: 720px) {
+      height: auto;
+    }
+  }
+
+  .slide-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: slide-bg-img-scale 24s linear alternate-reverse 0s infinite both;
+
+    .overlay-color {
+      z-index: 0;
+    }
+  }
+
+  @keyframes slide-bg-img-scale {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.5);
+    }
+  }
+
+  .pre-title {
+    transform: translateY(-1rem);
+    visibility: hidden;
+    opacity: 0;
+    @include ma-transition;
+    transition-delay: 0.3s;
+  }
+
+  @include screen-xxl {
+    .slide-2 .pre-title {
+      margin-top: -4rem;
+    }
+    .slide-3 .pre-title {
+      margin-top: -1rem;
+    }
+  }
+
+  @include screen-xl {
+    .slide-2 .pre-title {
+      margin-top: -6rem;
+    }
+    .slide-3 .pre-title {
+      margin-top: -3rem;
+    }
+  }
+
+  @include screen-lg {
+    .slide-2 .pre-title {
+      margin-top: -6rem;
+    }
+    .slide-3 .pre-title {
+      margin-top: -5rem;
+    }
+  }
+
+  @include screen-md {
+    .slide-2 .pre-title {
+      margin-top: -5rem;
+    }
+    .slide-3 .pre-title {
+      margin-top: -4rem;
+    }
+  }
+
+  @include screen-sm {
+    .slide-2 .pre-title {
+      position: relative;
+      top: 8.2rem !important;
+    }
+    .slide-3 .pre-title {
+      position: relative;
+      top: 9.5rem !important;
+    }
+  }
+
+  @include screen-xs {
+    .slide-2 .pre-title {
+      position: relative;
+      top: 8.5rem !important;
+    }
+    .slide-3 .pre-title {
+      position: relative;
+      top: 8.5rem !important;
+    }
+  }
+  
+
+  .slide-title {
+    @extend %hero-title-rules;
+
+    display: inline-block;
+    transform: translateY(3rem);
+    visibility: hidden;
+    opacity: 0;
+    @include ma-transition(all, 0.8s);
+    transition-delay: 0.5s;
+    width: 30rem;
+  }
+
+  .slide-2 .slide-title {
+    @include screen-xxl {
+      font-size: 2rem !important;
+      width: 28rem !important;
+      position: relative;
+      top: -1rem !important;
+    }
+  
+    @include screen-xl {
+      font-size: 2rem !important;
+      width: 28rem !important;
+      position: relative;
+      top: -3rem !important;
+    }
+    
+    @include screen-lg {
+      font-size: 2rem !important;
+      width: 28rem !important;
+      position: relative;
+      top: -4rem !important;
+    }
+    
+    @include screen-md {
+      font-size: 1.6rem !important;
+      width: 16rem !important;
+      position: relative;
+      top: -1.7rem !important;
+    }
+
+    @include screen-sm {
+      font-size: 1.8rem !important;
+      width: 34rem !important;      ;
+      position: relative;
+      top: 5rem !important;
+    }
+
+    @include screen-xs {
+      font-size: 2rem !important;
+      width: 27rem !important;      ;
+      position: relative;
+      top: 5rem !important;
+    }
+  }
+
+  .slide-3 .slide-title {
+    @include screen-xxl {
+      font-size: 2.2rem !important;
+      width: 28rem !important;
+      padding-bottom: 1rem !important;
+      position: relative;
+      top: -3rem !important;
+    }
+  
+    @include screen-xl {
+      font-size: 2.2rem !important;
+      width: 28rem !important;
+      padding-bottom: 1rem !important;
+      position: relative;
+      top: -5rem !important;
+    }
+  
+    @include screen-lg {
+      font-size: 2rem !important;
+      width: 28rem !important;
+      padding-bottom: 1rem !important;
+      position: relative;
+      top: -6rem !important;
+    }
+
+    @include screen-md {
+      font-size: 1.8rem !important;
+      width: 16rem !important;
+      position: relative;
+      top: -1.7rem !important;
+    }
+
+    @include screen-sm {
+      font-size: 1.8rem !important;
+      width: 34rem !important;
+      padding-bottom: 0.5rem !important;
+      position: relative;
+      top: 5rem !important;
+    }
+
+    @include screen-xs {
+      font-size: 2rem !important;
+      width: 27rem !important;
+      padding-bottom: 0.5rem !important;
+      position: relative;
+      top: 6rem !important;
+    }
+  }
+
+
+  .slide-subtitle {
+    @extend %hero-subtitle-rules;
+
+    transform: translateY(3rem);
+    visibility: hidden;
+    opacity: 0;
+    @include ma-transition;
+    transition-delay: 0.8s;
+  }
+
+  @include screen-xxl {
+    .slide-1 .slide-subtitle {
+      width: 24rem;
+      position: relative;
+      top: 0.3125rem !important; // 5px from logo
+      padding-bottom: 3rem !important;
+    }
+    .slide-2 .slide-subtitle {
+      width: 24rem;
+      position: relative;
+      top: -1rem !important;
+    }
+    .slide-3 .slide-subtitle {
+      width: 18rem;
+      position: relative;
+      top: -3rem !important;
+      padding-bottom: 1rem !important;
+    }
+  }
+
+  @include screen-md {
+    .slide-1 .slide-subtitle {
+      width: 21rem;
+      position: relative;
+      top: 0.3125rem !important; // 5px from logo
+      padding-bottom: 3rem !important;
+    }
+    .slide-2 .slide-subtitle {
+      width: 24rem;
+      position: relative;
+      top: -3rem !important;
+    }
+    .slide-3 .slide-subtitle {
+      width: 24rem;
+      position: relative;
+      top: -5rem !important;
+    }
+  }
+
+  @include screen-lg {
+    .slide-1 .slide-subtitle {
+      width: 28rem;
+      position: relative;
+      top: 3rem !important;
+    }
+    .slide-2 .slide-subtitle {
+      width: 24rem;
+      position: relative;
+      top: -2rem !important;
+    }
+    .slide-3 .slide-subtitle {
+      width: 28rem;
+      position: relative;
+      top: -4rem !important;
+    }
+  }
+
+  @include screen-md {
+    .slide-1 .slide-subtitle {
+      width: 35rem;
+      position: relative;
+      top: 2rem !important;
+    }
+    .slide-2 .slide-subtitle {
+      width: 35rem;
+      position: relative;
+      top: -2rem !important;
+    }
+    .slide-3 .slide-subtitle {
+      width: 35rem;
+      position: relative;
+      top: -2rem !important
+    }
+  }
+  
+  @include screen-sm {
+    .slide-1 .slide-subtitle {
+      width: 34rem;
+      position: relative;
+      top: 0.3125rem !important; // 5px from logo
+      padding-bottom: 11rem !important;
+    }
+    .slide-2 .slide-subtitle {
+      width: 34rem;
+      position: relative;
+      top: 5rem !important;
+      padding-bottom: 5rem !important;
+    }
+    .slide-3 .slide-subtitle {
+      width: 34rem;
+      position: relative;
+      top: 4rem !important;
+      padding-bottom: 4rem !important;
+    }
+  }
+
+  @include screen-xs {
+    .slide-1 .slide-subtitle {
+      width: 20rem;
+      position: relative;
+      top: 0.3125rem !important; // 5px from logo
+      padding-bottom: 9rem !important;
+    }
+    .slide-2 .slide-subtitle {
+      width: 20rem;
+      position: relative;
+      top: 5rem !important;
+      padding-bottom: 5rem !important;
+    }
+    .slide-3 .slide-subtitle {
+      width: 20rem;
+      position: relative;
+      top: 5.5rem !important;
+      padding-bottom: 5rem !important;
+    }
+  }
+  
+  .cta-links-area {
+    transform: translateY(3rem);
+    visibility: hidden;
+    opacity: 0;
+    @include ma-transition;
+    transition-delay: 1s;
+  }
+
+  .slider-stacked-arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    #{$end-direction}: 3rem;
+    z-index: 11;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: static;
+      margin: 0.25rem 0;
+      transform: none;
+    }
+
+    @include screen-md {
+      bottom: 1rem;
+      top: auto;
+      width: 100%;
+      transform: none;
+      #{$start-direction}: 0;
+      padding: 0 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    @include adding-arrows-styling;
+    background: rgba($clr-white-rgb, 0.35);
+    color: $clr-white;
+    outline: none;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:hover {
+      background: rgba($clr-main-rgb, 0.85);
+    }
+
+    @include screen-md {
+      bottom: 1rem;
+      top: auto;
+      transform: none;
+    }
+
+    @include screen-xs {
+      display: none;
+    }
+  }
+
+  .swiper-button-prev {
+    #{$start-direction}: 3rem;
+    #{$end-direction}: auto;
+
+    @include screen-md {
+      #{$start-direction}: 10px;
+    }
+  }
+
+  .swiper-button-next {
+    #{$end-direction}: 3rem;
+    #{$start-direction}: auto;
+
+    @include screen-md {
+      #{$end-direction}: 10px;
+    }
+  }
+
+  .slides-state {
+    position: absolute;
+    #{$start-direction}: 50%;
+    transform: translateX(-50% * $x-axe-direction);
+    bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 20;
+
+    .slide-num {
+      width: 3rem;
+      height: 3rem;
+      text-align: center;
+      color: $clr-white;
+      font-size: 2rem;
+      @include ma-transition;
+
+      @include screen-xs {
+        display: none;
+      }
+
+      &.slides-count {
+        opacity: 0.5;
+      }
+    }
+
+    .swiper-pagination {
+      position: static;
+      margin: 0 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .swiper-pagination-bullet {
+      width: 1.5rem;
+      height: 0.5rem;
+      display: inline-block;
+      border-radius: 2rem;
+      background-color: $clr-white;
+      opacity: 0.65;
+      @include ma-transition;
+
+      &.swiper-pagination-bullet-active {
+        background-color: $clr-main;
+        width: 2.5rem;
+        opacity: 1;
+      }
+
+      &:not(:last-child) {
+        margin-#{$end-direction}: 0.5rem !important;
+      }
+    }
+
+    &.v-align {
+      @media (min-width: 768px) {
+        #{$end-direction}: -3rem;
+        #{$start-direction}: auto;
+        transform: rotate(90deg) translateY(-50%);
+        top: 50%;
+        bottom: auto;
+
+        .slide-num {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+
+  .swiper-slide-active {
+    .pre-title,
+    .slide-title,
+    .slide-subtitle,
+    .cta-links-area {
+      transform: translateY(0);
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .slide-title[data-splitting="words"] {
+      .word {
+        opacity: 0;
+        /*only on fade family animations*/
+        animation: fadeInLeft 1s both ease;
+        animation-delay: calc(0.1s + (0.1s * var(--word-index)));
+      }
+    }
+
+    .slide-title[data-splitting="chars"] {
+      $anim-delay: calc(0.1s + (0.06s * var(--char-index)));
+
+      .char {
+        // opacity: 0;  /*only on fade family animations*/
+        animation: rollIn 0.35s both ease;
+        animation-delay: $anim-delay;
+      }
+
+      &.anim-fade-in-down {
+        .char {
+          opacity: 0;
+          animation: fadeInDown 0.35s both ease;
+          animation-delay: $anim-delay;
+        }
+      }
+
+      &.anim-fade-in-up {
+        .char {
+          opacity: 0;
+          animation: fadeInUp 0.35s both ease;
+          animation-delay: $anim-delay;
+        }
+      }
+
+      &.anim-rotate-in {
+        .char {
+          animation: rotateIn 0.35s both ease;
+          animation-delay: $anim-delay;
+        }
+      }
+    }
+  }
+}
+
+// Start inner pages hero section
+.inner-page-hero {
+  height: 60vh;
+  min-height: 60vh;
+  opacity: 1;
+  &:before {
+    display: none;
+  }
+  .hero-text-area {
+    margin: 0;
+    .hero-title {
+      display: block;
+      color: $clr-white;
+    }
+
+    .hero-title {
+      margin-bottom: 0.5rem;
+      line-height: 0.5;
+    }
+
+    &.centerd {
+      text-align: center;
+    }
+  }
+}
+
+// End internal pages hero section
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; // Ensures it covers the area
+  z-index: 1; // Keeps it behind content
+  
+  @include screen-xl {
+    height: 60vh; // Reduce height for medium screens (≤ 991px)
+    left: 0;
+    top: 6rem;
+  }
+
+  @include screen-lg {
+    height: 70vh; // Reduce height for medium screens (≤ 991px)
+    left: 0;
+    top: 0;
+  }
+
+  @include screen-md {
+    height: 70vh; // Reduce height for medium screens (≤ 991px)
+    left: 0;
+    top: 0;
+  }
+
+  @include screen-sm {
+    height: 64vh; // Reduce height for small screens (≤ 767px)
+    left: 0;
+    top: 0
+  }
+
+  @include screen-xs {
+    height: 36vh; // Reduce height for extra-small screens (≤ 575px)
+    top: 4em;
+    left: 0;
+  }
+}
+

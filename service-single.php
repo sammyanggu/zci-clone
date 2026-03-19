@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Z-Connect - IT Solutions &amp; Business Services">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <!-- fav icon -->
+        <link rel="icon" href="assets/images/fav-icon/fav-icon.png">
+        
+        <!-- bootstarp -->
+        <link rel="stylesheet" href="css/vendors/bootstrap.min.css">
+        
+        <!-- animate.css file -->
+        <link rel="stylesheet" href="css/vendors/animate.css">
+        
+        <!-- Fancybox -->
+        <link rel="stylesheet" href="css/vendors/jquery.fancybox.min.css">
+        
+        <!-- flaticon -->
+        <link rel="stylesheet" href="css/vendors/flaticon/flaticon.css">
+        
+        <!-- fontAwesome -->
+        <link rel="stylesheet" href="css/vendors/all.min.css">
+        
+        <!-- bootstrap icons -->
+        <link rel="stylesheet" href="css/vendors/bootstrap-icons-1.9.1/bootstrap-icons.css">
+        
+        <!-- Swiper -->
+        <link rel="stylesheet" href="css/vendors/swiper-bundle.min.css">
+        
+        <!-- Font Family -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&amp;display=swap">
+        
+        <!-- main-LTR -->
+        <link rel="stylesheet" href="css/main-LTR.css">
+        <title>Z-Connect   |   service details</title>
+  </head>
+  <body> 
+  
+    <!--Start Page Header-->
+    <?php include('inc/header-section.php');?>
+    <!--End Page Header-->
+
+    <!-- Start Page hero-->
+    <!-- Start inner Page hero-->
+    <section class="d-flex align-items-center page-hero  inner-page-hero " id="page-hero">
+      <div class="overlay-photo-image-bg parallax" data-bg-img="assets/images/hero/inner-page-hero.jpg" data-bg-opacity="1"></div>
+      <div class="overlay-color" data-bg-opacity=".75"></div>
+      <div class="container">
+        <div class="hero-text-area centerd">
+          <h1 class="hero-title  wow fadeInUp" data-wow-delay=".2s">service details</h1>
+          <nav aria-label="breadcrumb ">
+            <ul class="breadcrumb wow fadeInUp" data-wow-delay=".6s">
+              <li class="breadcrumb-item"><a class="breadcrumb-link" href="#0"><i class="bi bi-house icon "></i>home</a></li>
+              <li class="breadcrumb-item active">service details</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <!-- End inner Page hero-->
+    
+    <!-- Start inner Page hero-->
+    <div class="service-single "> 
+      <div class="container">
+        <div class="row">
+          <!--Start service content-->
+          <div class="col-12 col-xl-8  ">
+            <div class="service-content-area">
+              <div class="featured-img-area part"><img class="feat-img img-fluid" src="assets/images/services/service-single-featured-img.jpg" alt="featured image"></div>
+              <div class="service-content">
+                <div class="part">
+                  <h2 class="service-title">Information Security services we offer</h2>
+                  <p class="service-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quidem debitis ad dolorum assumenda exercitationem fuga sequi, sit repellat fugit voluptate numquam animi in quos, voluptas culpa! Nobis dolorum ut tempora nam molestiae velit nostrum! Voluptas velit accusamus alias odio?</p>
+                  <p class="service-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quidem debitis ad dolorum assumenda exercitationem fuga sequi, sit repellat fugit voluptate numquam animi in quos, voluptas culpa! Nobis dolorum ut tempora nam molestiae </p>
+                </div>
+                <div class="part">
+                  <div class="two-cols-img ">
+                    <div class="row">
+                      <div class="col-12 col-md-6 mb-3">
+                        <div class="img-col"><img class="img-fluid" src="assets/images/services/service-single-img-col-1.jpg" loading="lazy" alt="service single image "></div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div class="img-col"><img class="img-fluid" src="assets/images/services/service-single-img-col-2.jpg" loading="lazy" alt="service single image "></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="part">
+                  <h2 class="service-title">Information Security services we offer</h2>
+                  <p class="service-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet magni earum ad suscipit doloremque perferendis debitis perspiciatis iste reiciendis odio ducimus quis, dolor minima. Deserunt ea aliquam, ad expedita neque voluptas sequi saepe error nesciunt? Culpa dolore voluptatibus sed impedit blanditiis excepturi harum dolor. </p>
+                  <p class="service-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quidem debitis ad dolorum assumenda exercitationem fuga sequi, sit repellat fugit voluptate numquam animi in quos, voluptas culpa! Nobis dolorum ut tempora nam molestiae </p>
+                </div>
+                <div class="part">
+                  <div class="info-items-list">
+                    <div class="row">
+                      <div class="col-12 col-md-6 ">
+                        <div class="info-item"><span class="info-number ">01.</span>
+                          <div class="info-content">
+                            <h5 class="info-title">latest technologies </h5>
+                            <p class="info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 ">
+                        <div class="info-item"><span class="info-number ">02.</span>
+                          <div class="info-content">
+                            <h5 class="info-title">uniqe solutions </h5>
+                            <p class="info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 ">
+                        <div class="info-item"><span class="info-number ">03.</span>
+                          <div class="info-content">
+                            <h5 class="info-title">powerful strategies </h5>
+                            <p class="info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 ">
+                        <div class="info-item"><span class="info-number ">04.</span>
+                          <div class="info-content">
+                            <h5 class="info-title">delever just on time </h5>
+                            <p class="info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="part">
+                  <h2 class="service-title"> most asked questions</h2>
+                  <div class="faq">           
+                    <!--Start Accordion List For FAQ-->
+                    <div class="faq-accordion " id="accordion">
+                      <div class="card mb-2">
+                        <div class="card-header " id="heading-1">
+                          <h5 class="mb-0 faq-title">
+                            <button class="btn btn-link  faq-btn  collapsed " data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">are your service easy to use?</button>
+                          </h5>
+                        </div>
+                        <div class="collapse " id="collapse-1" aria-labelledby="collapse-1" data-bs-parent="#accordion">
+                          <div class="card-body">
+                            <p class="faq-answer">mhmd, Anim pariatur cliche reprehenderit, enim eiusmod high life
+          accusamus terry richardson ad squid. 3 wolf moon officia
+          aute,
+          non cupidatat skateboard dolor brunch. Food truck quinoa
+          nesciunt
+          laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put
+          a
+          bird on it squid single-origin coffee nulla assumenda
+          shoreditch
+          et. Nihil anim keffiyeh helvetica, craft beer labore wes
+          anderson
+          cred nesciunt sapiente ea proident. Ad vegan excepteur
+          butcher
+          vice lomo. Leggings occaecat craft beer farm-to-table. </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card mb-2">
+                        <div class="card-header " id="heading-2">
+                          <h5 class="mb-0 faq-title">
+                            <button class="btn btn-link  faq-btn  collapsed " data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">will i receive future updates?</button>
+                          </h5>
+                        </div>
+                        <div class="collapse " id="collapse-2" aria-labelledby="collapse-2" data-bs-parent="#accordion">
+                          <div class="card-body">
+                            <p class="faq-answer">mhmd, Anim pariatur cliche reprehenderit, enim eiusmod high life
+          accusamus terry richardson ad squid. 3 wolf moon officia
+          aute,
+          non cupidatat skateboard dolor brunch. Food truck quinoa
+          nesciunt
+          laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put
+          a
+          bird on it squid single-origin coffee nulla assumenda
+          shoreditch
+          et. Nihil anim keffiyeh helvetica, craft beer labore wes
+          anderson
+          cred nesciunt sapiente ea proident. Ad vegan excepteur
+          butcher
+          vice lomo. Leggings occaecat craft beer farm-to-table. </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card mb-2">
+                        <div class="card-header " id="heading-3">
+                          <h5 class="mb-0 faq-title">
+                            <button class="btn btn-link  faq-btn  collapsed " data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="true" aria-controls="collapse-3">is this services work in my country?</button>
+                          </h5>
+                        </div>
+                        <div class="collapse " id="collapse-3" aria-labelledby="collapse-3" data-bs-parent="#accordion">
+                          <div class="card-body">
+                            <p class="faq-answer">mhmd, Anim pariatur cliche reprehenderit, enim eiusmod high life
+          accusamus terry richardson ad squid. 3 wolf moon officia
+          aute,
+          non cupidatat skateboard dolor brunch. Food truck quinoa
+          nesciunt
+          laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put
+          a
+          bird on it squid single-origin coffee nulla assumenda
+          shoreditch
+          et. Nihil anim keffiyeh helvetica, craft beer labore wes
+          anderson
+          cred nesciunt sapiente ea proident. Ad vegan excepteur
+          butcher
+          vice lomo. Leggings occaecat craft beer farm-to-table. </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card mb-2">
+                        <div class="card-header " id="heading-4">
+                          <h5 class="mb-0 faq-title">
+                            <button class="btn btn-link  faq-btn  collapsed " data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="true" aria-controls="collapse-4">How much I will pay?</button>
+                          </h5>
+                        </div>
+                        <div class="collapse " id="collapse-4" aria-labelledby="collapse-4" data-bs-parent="#accordion">
+                          <div class="card-body">
+                            <p class="faq-answer">mhmd, Anim pariatur cliche reprehenderit, enim eiusmod high life
+          accusamus terry richardson ad squid. 3 wolf moon officia
+          aute,
+          non cupidatat skateboard dolor brunch. Food truck quinoa
+          nesciunt
+          laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put
+          a
+          bird on it squid single-origin coffee nulla assumenda
+          shoreditch
+          et. Nihil anim keffiyeh helvetica, craft beer labore wes
+          anderson
+          cred nesciunt sapiente ea proident. Ad vegan excepteur
+          butcher
+          vice lomo. Leggings occaecat craft beer farm-to-table. </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Start service content-->
+          <!-- Start service sidebar-->
+          <div class="col-12 col-xl-4">
+            <div class="service-sidebar ">
+              <div class="sidebar-pane">
+                <h2 class="sidebar-title">list of services</h2>
+                <ul class="list">
+                  <li class="list-item active"><i class="flaticon-web-development font-icon"></i><a href="#0"> web development<i class="bi bi-arrow-right icon "></i></a></li>
+                  <li class="list-item"><i class="flaticon-nanotechnology font-icon"></i><a href="#0"> Digital Marketing<i class="bi bi-arrow-right icon "></i></a></li>
+                  <li class="list-item"><i class="flaticon-web-domain font-icon"></i><a href="#0"> SaaS products <i class="bi bi-arrow-right icon "></i></a></li>
+                  <li class="list-item"><i class="flaticon-profile font-icon"></i><a href="#0"> Apps development<i class="bi bi-arrow-right icon "></i></a></li>
+                  <li class="list-item"><i class="flaticon-search font-icon"></i><a href="#0"> SEO services<i class="bi bi-arrow-right icon "></i></a></li>
+                  <li class="list-item"><i class="flaticon-strategy font-icon"></i><a href="#0"> data analysis<i class="bi bi-arrow-right icon "></i></a></li>
+                </ul>
+              </div>
+              <div class="sidebar-pane">
+                <div class="download-area">
+                  <h2 class="sidebar-title">download assets</h2>
+                  <p class="sidebar-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure minima distinctio dolores quidem ducimus! Illum.</p>
+                  <ul class="list">
+                    <li class="list-item"><i class="flaticon-downloading font-icon"></i><a href="#0">
+                         service-report<i class="bi bi-arrow-right icon "></i></a></li>
+                    <li class="list-item"><i class="flaticon-downloading font-icon"></i><a href="#0">
+                         all services<i class="bi bi-arrow-right icon "></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="sidebar-pane">
+                <div class="social-area">
+                  <h2 class="sidebar-title">follow us</h2>
+                  <div class="sc-wrapper dir-row sc-size-40">
+                    <ul class="sc-list">
+                      <li class="sc-item " title="Facebook"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-facebook-f sc-icon"></i></a></li>
+                      <li class="sc-item " title="youtube"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-youtube sc-icon"></i></a></li>
+                      <li class="sc-item " title="instagram"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-instagram sc-icon"></i></a></li>
+                      <li class="sc-item " title="twitter"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-twitter sc-icon"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End service sidebar-->
+        </div>
+      </div>
+    </div>
+    <!-- End inner Page hero-->
+
+    <!-- Start  page-footer Section-->
+    <?php include("inc/footer-section.php");?>
+    <!-- End  page-footer Section-->
+
+  </body>
+</html>

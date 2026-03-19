@@ -1,0 +1,157 @@
+/*==
+- global-rules and helper classes
+- page-header
+- page-hero 
+- services
+- about 
+- portfolio 
+- portfolio-single  
+- our-team 
+- our-clients 
+- faq 
+- mission-vision-values
+- testimonials 
+- contact-us 
+- take-action 
+- page-footer 
+- blog
+- 404 Page
+- pricing
+- stats
+- Dark Theme Rules
+===*/
+
+/* Start: Added by PS to make SCSS work */
+@import "0-configs/direction-LTR";
+/* End: Added by PS to make SCSS work */
+
+/* start global, helper classes , Components Rules*/
+@import "1-helpers/_variables";
+@import "1-helpers/_mixins";
+@import "1-helpers/_globals";
+@import "1-helpers/_custom-animations";
+
+@import "2-components/_buttons";
+@import "2-components/_breadcrumb";
+@import "2-components/_forms";
+@import "2-components/_loading-screen";
+@import "2-components/_header-search-box";
+/*ُEnd global, helper classes , components Rules*/
+
+/* Start .page-header Rules   */
+@import "3-layout/_page-header";
+/*
+ End .page-header Rules    
+*/
+
+/*   Start .page-hero Rules   */
+@import "3-layout/_page-hero";
+/*   End .page-hero Rules   */
+
+/*    Start .services Section Rules    */
+@import "3-layout/_services";
+/*    End .services Section Rules   */
+
+/*   Start about Section   */
+@import "3-layout/_about";
+/*   End about Section    */
+
+/*    Start portfolio Section  */
+@import "3-layout/_portfolio";
+/*    End portfolio Section  */
+
+/*    Start portfolio-single Section  */
+@import "3-layout/_portfolio-single";
+/*     End portfolio-single Section  */
+
+/*   Start our-team Section   */
+@import "3-layout/_our-team";
+/*   End our-team Section   */
+
+/*   Start our-clients Section   */
+@import "3-layout/_our-clients";
+/*   End our-clients Section   */
+
+/*   Start faq Section   */
+@import "3-layout/_faq";
+/*   End faq Section  */
+
+/*   Start mission-vision-values Section   */
+@import "3-layout/_mission-vision-values";
+/*   End mission-vision-values Section  */
+
+/*   Start testimonials Section   */
+@import "3-layout/_testimonials";
+/*   End testimonials Section   */
+
+/*    Start contact-us Section  */
+@import "3-layout/_contact-us";
+/*    End contact-us Section  */
+
+/*   Start take-action Section   */
+@import "3-layout/_take-action";
+/*   End take-action Section   */
+
+/*    Start page-footer Section  */
+@import "3-layout/_page-footer";
+/*    End page-footer Section  */
+
+/*    Start blog Page  */
+@import "3-layout/_blog";
+/*    End blog Page  */
+
+/*   Start 404 Page  */
+@import "3-layout/_404";
+/*   End 404 Page  */
+
+/*   Start benefits Section  */
+@import "3-layout/_benefits";
+/*    End benefits Section  */
+
+/*   Start pricing Section  */
+@import "3-layout/_pricing";
+/*    End pricing Section  */
+
+/*   Start stats section Rules  */
+@import "3-layout/_stats";
+/*  End  stats section Rules    */
+
+/* Uncomment below to insert screen size in top left corner of screen */
+/*
+@include screen-xxl {
+  body::before {
+    content: "screen-xxl (≥1440px)";
+    position: fixed; top: 0; left: 0; background: black; z-index: 9999;
+  }
+}
+@include screen-xl {
+  body::before {
+    content: "screen-xl (1200px–1439px)";
+    position: fixed; top: 0; left: 0; background: black; z-index: 9999;
+  }
+}
+@include screen-lg {
+  body::before {
+    content: "screen-lg (992px–1199px)";
+    position: fixed; top: 0; left: 0; background: black; z-index: 9999;
+  }
+}
+@include screen-md {
+  body::before {
+    content: "screen-md (768px–991px)";
+    position: fixed; top: 0; left: 0; background: black; z-index: 9999;
+  }
+}
+@include screen-sm {
+  body::before {
+    content: "screen-sm (576px–767px)";
+    position: fixed; top: 0; left: 0; background: black; z-index: 9999;
+  }
+}
+@include screen-xs {
+  body::before {
+    content: "screen-xs (≤575px)";
+    position: fixed; top: 0; left: 0; background: black; z-index: 9999;
+  }
+}
+*/
