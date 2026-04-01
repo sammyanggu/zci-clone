@@ -370,7 +370,7 @@ a:hover {
 }
 
 .has-dark-bg {
-  background-color: var(--clr-dark-blue);
+  background-color: var(--clr-white);
 }
 .has-dark-bg .sec-heading .title,
 .has-dark-bg .sec-heading .subtitle {
@@ -385,7 +385,7 @@ a:hover {
 }
 
 .overlay-color {
-  background: var(--clr-dark-blue);
+  background: var(--clr-white);
   opacity: 0.65;
 }
 
@@ -1010,7 +1010,7 @@ a:hover {
   opacity: 1;
 }
 .mode-switcher.light-theme {
-  background-color: var(--clr-dark-blue);
+  background-color: var(--clr-white);
 }
 .mode-switcher.light-theme .icon {
   color: var(--clr-white);
@@ -1338,6 +1338,7 @@ body.rounded-btns .read-more {
   border: none;
   color: var(--clr-white);
   background: rgba(var(--clr-white-rgb), 0.35);
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   margin-bottom: 0;
   text-align: left;
@@ -1430,7 +1431,7 @@ body.rounded-btns .read-more {
   padding-top: 0.5rem;
 }
 .three-field-form.has-dark-bg {
-  background-color: var(--clr-dark-blue);
+  background-color: var(--clr-white);
 }
 .three-field-form.has-dark-bg .form-heading {
   color: var(--clr-white);
@@ -1441,7 +1442,7 @@ body.rounded-btns .read-more {
 }
 .three-field-form.has-dark-bg input:not([type=submit]) {
   color: var(--clr-white) !important;
-  background-color: var(--clr-semi-dark-blue) !important;
+  background-color: var(--clr-white) !important;
 }
 
 /*mailchimp alerts*/
@@ -1481,7 +1482,7 @@ body.rounded-btns .read-more {
   right: 0;
   bottom: 0;
   z-index: 9999999;
-  background: var(--clr-dark-blue);
+  background: var(--clr-white);
 }
 .loading-screen .bar {
   position: absolute;
@@ -1529,7 +1530,7 @@ body.rounded-btns .read-more {
   left: 0;
   width: 100%;
   height: 0;
-  background-color: rgba(var(--clr-dark-blue-rgb), 0.95);
+  background-color: rgba(var(--clr-white-rgb), 0.95);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2276,7 +2277,7 @@ body.rounded-btns .read-more {
 
 .hero-swiper-slider {
   padding: 0;
-  background: var(--clr-dark-blue);
+  background: var(--clr-white);
 }
 .hero-swiper-slider [data-splitting=chars] .word .char {
   text-transform: lowercase;
@@ -2978,7 +2979,7 @@ body.rounded-btns .read-more {
   padding: 0;
 }
 .services-boxed.has-dark-bg {
-  background-color: var(--clr-semi-dark-blue);
+  background-color: var(--clr-white);
 }
 .services-boxed.has-dark-bg .service-title {
   color: var(--clr-white);
@@ -3029,7 +3030,7 @@ body.rounded-btns .read-more {
   padding: 1rem 1.25rem;
   padding-right: 0;
   margin-bottom: 1rem;
-  background: rgba(var(--clr-dark-blue-rgb), 1);
+  background: rgba(var(--clr-white-rgb), 1);
   color: var(--clr-white);
   opacity: 0.65;
   border-radius: 0.25rem;
@@ -3067,7 +3068,7 @@ body.rounded-btns .read-more {
 }
 .service-single .service-sidebar .sidebar-pane .sc-list .sc-item {
   color: var(--clr-white);
-  background-color: var(--clr-dark-blue);
+  background-color: var(--clr-white);
   opacity: 0.75;
 }
 .service-single .service-sidebar .sidebar-pane .sc-list .sc-item .sc-link {
@@ -3372,7 +3373,7 @@ body.rounded-btns .read-more {
   height: 100%;
   padding: 0 1rem;
   padding-left: 5rem;
-  background-color: rgba(var(--clr-dark-blue-rgb), 0.75);
+  background-color: rgba(var(--clr-white-rgb), 0.75);
   color: var(--clr-white);
   top: 0;
   left: 0;
@@ -3782,7 +3783,7 @@ body.rounded-btns .read-more {
   filter: grayscale(0);
 }
 .our-clients-blocks {
-  background: var(--clr-semi-dark-blue);
+  background: var(--clr-white);
 }
 .our-clients-blocks .section-heading .section-title {
   color: var(--clr-grey);
@@ -4209,7 +4210,7 @@ body.rounded-btns .read-more {
 /*    End contact-us Section  */
 /*   Start take-action Section   */
 .take-action {
-  background: var(--clr-dark-blue);
+  background: var(--clr-white);
   padding: 150px 0;
 }
 .take-action .quote {
@@ -4391,7 +4392,7 @@ body.rounded-btns .read-more {
 }
 
 .dark-color-footer {
-  background-color: var(--clr-dark-blue);
+  background-color: var(--clr-white);
 }
 .dark-color-footer .sc-wrapper .sc-list .sc-item:hover .sc-icon,
 .dark-color-footer .terms-links,
@@ -4771,7 +4772,7 @@ body.rounded-btns .read-more {
 .blog .posts-grid .post-img-wrapper .post-date {
   position: absolute;
   color: var(--clr-white);
-  background: rgba(var(--clr-dark-blue-rgb), 0.75);
+  background: rgba(var(--clr-white-rgb), 0.75);
   padding: 0.25rem 1.25rem;
   top: 0.75rem;
   left: 0.75rem;
@@ -5244,7 +5245,7 @@ body.rounded-btns .read-more {
   z-index: 0;
   height: 100vh;
   padding: 120px 0;
-  background-color: var(--clr-dark-blue);
+  background-color: var(--clr-white);
 }
 @media (max-width: 991px) {
   .err-404 {
@@ -5619,7 +5620,7 @@ body.rounded-btns .read-more {
   position: relative;
   overflow: hidden;
   z-index: 0;
-  background-color: var(--clr-dark-blue);
+  background-color: var(--clr-white);
 }
 .stats .section-heading .line-solid-color {
   background: var(--clr-white);
@@ -5643,7 +5644,7 @@ body.rounded-btns .read-more {
   position: relative;
   padding: 2rem;
   color: var(--clr-white);
-  background-color: rgba(var(--clr-dark-blue-rgb), 0.25);
+  background-color: rgba(var(--clr-white-rgb), 0.25);
   border: 1px solid rgba(var(--clr-main-rgb), 0.35);
   border-top: 0.25rem solid rgba(var(--clr-main-rgb), 1);
   border-bottom-left-radius: 0.5rem;

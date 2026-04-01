@@ -183,10 +183,29 @@
           <!--fourth slider-->
           <div class="swiper-slide slide-4">
             <div class="container">
-              <div class="hero-text-area content-always-light d-flex align-items-center justify-content-center" style="min-height: 100vh;">
-                <div class="row w-100">
-                  <div class="col-12 d-flex align-items-center justify-content-center">
-                    <a class="btn-solid cta-link cta-link-primary" href="contact-us.php" style="font-size: 1.5rem; padding: 1.5rem 3rem;">Apply Now</a>
+              <div class="hero-text-area content-always-light d-flex align-items-center" style="min-height: 100vh;">
+                <div class="row">
+                
+                  <!-- Begin Social Media -->
+                  <div class="col-12">
+                    <div class="hero-social-icons mb-3">
+                      <div class="sc-wrapper dir-row sc-flat">
+                        <?php include('inc/social-media-links.php');?>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Social Media -->
+
+                  <div class="col-12 col-md-8 col-lg-7">
+                    <h1 class="slide-title mb-4">Ready to Join Our Team?</h1>
+                  </div>
+                  <div class="col-10 col-md-8 col-lg-6">
+                    <p class="slide-subtitle">
+                      Join our talented team and be part of innovative IT solutions and services.
+                    </p>
+                  </div>
+                  <div class="col-12">
+                    <div class="cta-links-area"><a class="btn-solid cta-link cta-link-primary" href="application.php">Apply Now</a></div>
                   </div>
                 </div>
               </div>
@@ -233,6 +252,10 @@
     <!-- Start take-action Section -->
     <?php include('inc/take-action-section.php');?>
     <!-- End take-action Section -->
+
+    <!-- Start Apply-Now Section -->
+    <?php include('inc/apply-now-section.php');?>
+    <!-- End Apply-Now Section -->
 
     <!-- Start  page-footer Section-->
     <?php include("inc/footer-section.php");?>

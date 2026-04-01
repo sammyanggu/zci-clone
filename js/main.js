@@ -341,16 +341,44 @@ $(function () {
         type: "POST",
         url: contactForm.attr("action"),
         data: contactForm.serialize(),
+        dataType: "json",
 
-        success: function (data) {
-          $(".done-msg")
-            .text("Thank you, Your Message Was Received!")
-            .toggleClass("show");
-          setTimeout(function () {
-            $(".done-msg").text("").toggleClass("show");
-          }, 3000);
-          contactForm[0].reset();
+        success: function (response) {
+          const doneMsg = $(".done-msg");
+          
+          if (response.success) {
+            doneMsg
+              .text(response.message || "Thank you, Your Message Was Received!")
+              .css("color", "#28a745")
+              .addClass("show");
+            contactForm[0].reset();
+            
+            setTimeout(function () {
+              doneMsg.text("").removeClass("show").css("color", "");
+            }, 4000);
+          } else {
+            doneMsg
+              .text(response.message || "Error sending message. Please try again.")
+              .css("color", "#dc3545")
+              .addClass("show");
+            
+            setTimeout(function () {
+              doneMsg.text("").removeClass("show").css("color", "");
+            }, 4000);
+          }
         },
+        
+        error: function () {
+          const doneMsg = $(".done-msg");
+          doneMsg
+            .text("Error sending message. Please try again later.")
+            .css("color", "#dc3545")
+            .addClass("show");
+          
+          setTimeout(function () {
+            doneMsg.text("").removeClass("show").css("color", "");
+          }, 4000);
+        }
       });
       return false;
     }
