@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
         <!-- fav icon -->
-        <link rel="icon" href="assets/images/fav-icon/fav-icon.png">
+        <link rel="icon" href="assets/images-zconnect/logo/z-connect-circle-logo.png">
         
         <!-- bootstarp -->
         <link rel="stylesheet" href="css/vendors/bootstrap.min.css">
@@ -152,8 +152,105 @@
     <script src="js/vendors/bootstrap.bundle.min.js"></script>
 
     <!-- Application Form Validation and Submission -->
+    <style>
+      .modal-backdrop {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1040;
+      }
+      
+      .modal-backdrop.show {
+        display: block;
+      }
+      
+      .modal-content-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+        z-index: 1050;
+        max-width: 500px;
+        width: 90%;
+        text-align: center;
+      }
+      
+      .modal-content-popup.show {
+        display: block;
+      }
+      
+      .modal-content-popup h2 {
+        color: #28a745;
+        font-size: 24px;
+        margin-bottom: 15px;
+        margin-top: 0;
+      }
+      
+      .modal-content-popup p {
+        color: #333;
+        font-size: 16px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+      
+      .modal-content-popup .check-icon {
+        font-size: 60px;
+        color: #28a745;
+        margin-bottom: 20px;
+      }
+      
+      .modal-close-btn {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .modal-close-btn:hover {
+        background-color: #1e7e34;
+      }
+    </style>
+    
     <script>
       const form = document.getElementById('applicationForm');
+      
+      // Modal elements
+      const modal = document.createElement('div');
+      modal.className = 'modal-backdrop';
+      document.body.appendChild(modal);
+      
+      const modalContent = document.createElement('div');
+      modalContent.className = 'modal-content-popup';
+      modalContent.innerHTML = `
+        <div class="check-icon">✓</div>
+        <h2>Application Submitted!</h2>
+        <p>Thank you for your interest in joining our team!<br><br>A confirmation email has been sent to your email address. Please check your Gmail inbox for further details.</p>
+        <button class="modal-close-btn" onclick="location.reload()">Close</button>
+      `;
+      document.body.appendChild(modalContent);
+      
+      function showModal() {
+        modal.classList.add('show');
+        modalContent.classList.add('show');
+      }
+      
+      function hideModal() {
+        modal.classList.remove('show');
+        modalContent.classList.remove('show');
+      }
       
       function validateForm() {
         // Reset all error messages
@@ -261,32 +358,24 @@
           submitBtn.disabled = false;
           submitBtn.textContent = originalText;
 
-          // Create/show success or error message
-          let messageDiv = document.getElementById('formMessage');
-          if (!messageDiv) {
-            messageDiv = document.createElement('div');
-            messageDiv.id = 'formMessage';
-            messageDiv.style.marginTop = '20px';
-            messageDiv.style.padding = '15px';
-            messageDiv.style.borderRadius = '5px';
-            messageDiv.style.fontWeight = 'bold';
-            form.parentNode.insertBefore(messageDiv, form);
-          }
-
           if (data.success) {
-            messageDiv.style.backgroundColor = '#d4edda';
-            messageDiv.style.color = '#155724';
-            messageDiv.style.border = '1px solid #c3e6cb';
-            messageDiv.textContent = '✓ ' + data.message;
+            // Show success modal
+            showModal();
             
             // Reset form
             form.reset();
-            
-            // Hide message after 5 seconds
-            setTimeout(() => {
-              messageDiv.style.display = 'none';
-            }, 5000);
           } else {
+            // Show error message
+            let messageDiv = document.getElementById('formMessage');
+            if (!messageDiv) {
+              messageDiv = document.createElement('div');
+              messageDiv.id = 'formMessage';
+              messageDiv.style.marginTop = '20px';
+              messageDiv.style.padding = '15px';
+              messageDiv.style.borderRadius = '5px';
+              messageDiv.style.fontWeight = 'bold';
+              form.parentNode.insertBefore(messageDiv, form);
+            }
             messageDiv.style.backgroundColor = '#f8d7da';
             messageDiv.style.color = '#721c24';
             messageDiv.style.border = '1px solid #f5c6cb';
@@ -314,6 +403,8 @@
           messageDiv.style.color = '#721c24';
           messageDiv.style.border = '1px solid #f5c6cb';
           messageDiv.textContent = '✗ Error submitting form. Please try again later.';
+          
+          console.error('Form submission error:', error);
         });
 
         return false;

@@ -176,6 +176,64 @@ $(function () {
     }
   });
 
+  /* ******* Smooth Scrolling for sub-menu links ********/
+  $(".sub-menu a[href*='#']").on("click", function (e) {
+    const href = $(this).attr("href");
+    // Check if it's an external link or internal one
+    if (href.includes("#")) {
+      const target = href.split("#")[1];
+      const targetElement = $("#" + target);
+      
+      if (targetElement.length) {
+        e.preventDefault();
+        let scrollPosition = targetElement.offset().top - navMain.innerHeight() + 1;
+        
+        $(root).animate(
+          {
+            scrollTop: scrollPosition,
+          },
+          500,
+          function() {
+            // Close the dropdown after scrolling
+            $(".header-basic .has-sub-menu.active").removeClass("active");
+            
+            // Close the mobile menu
+            if ($(".menu-wrapper").hasClass("show")) {
+              $(".menu-wrapper").removeClass("show");
+            }
+            if ($(".menu-toggler").hasClass("close-menu")) {
+              $(".menu-toggler").removeClass("close-menu");
+            }
+          }
+        );
+      }
+    }
+  });
+
+  /* ******* Manual Click-based Dropdown Toggle ********/
+  $(".header-basic .menu-link").on("click", function (e) {
+    const menuItem = $(this).closest(".has-sub-menu");
+    const hasActualSubMenu = menuItem.find(".sub-menu").length > 0;
+    
+    // Check if this menu item has an actual sub-menu element
+    if (menuItem.length && hasActualSubMenu) {
+      e.preventDefault();
+      
+      // Close other open submenus
+      $(".header-basic .has-sub-menu.active").not(menuItem).removeClass("active");
+      
+      // Toggle active class on clicked menu item
+      menuItem.toggleClass("active");
+    }
+  });
+
+  // Close dropdown when clicking outside
+  $(document).on("click", function (e) {
+    if (!$(e.target).closest(".has-sub-menu").length) {
+      $(".header-basic .has-sub-menu.active").removeClass("active");
+    }
+  });
+
   /*----------------------------------
    END #page-header js rules
   ----------------------------------*/
@@ -347,15 +405,11 @@ $(function () {
           const doneMsg = $(".done-msg");
           
           if (response.success) {
-            doneMsg
-              .text(response.message || "Thank you, Your Message Was Received!")
-              .css("color", "#28a745")
-              .addClass("show");
+            // Call modal function from contact-us.php
+            if (typeof showContactModalPopup === 'function') {
+              showContactModalPopup();
+            }
             contactForm[0].reset();
-            
-            setTimeout(function () {
-              doneMsg.text("").removeClass("show").css("color", "");
-            }, 4000);
           } else {
             doneMsg
               .text(response.message || "Error sending message. Please try again.")
@@ -812,3 +866,24 @@ document.addEventListener("DOMContentLoaded", function() {
            500 // Scroll duration in milliseconds
        );
    });
+
+   /* ******* Smooth scroll to hash on page load ********/
+   (function() {
+     if (window.location.hash) {
+       const hash = window.location.hash.substring(1);
+       const target = $("#" + hash);
+       
+       if (target.length) {
+         // Delay to ensure page is fully loaded
+         setTimeout(function() {
+           let navHeight = navMain.innerHeight() || 0;
+           let scrollPosition = target.offset().top - navHeight + 1;
+           
+           $("html, body").animate(
+             { scrollTop: scrollPosition },
+             500
+           );
+         }, 200);
+       }
+     }
+   })();

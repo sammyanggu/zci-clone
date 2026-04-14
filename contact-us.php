@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
         <!-- fav icon -->
-        <link rel="icon" href="assets/images/fav-icon/fav-icon.png">
+        <link rel="icon" href="assets/images-zconnect/logo/z-connect-circle-logo.png">
         
         <!-- bootstarp -->
         <link rel="stylesheet" href="css/vendors/bootstrap.min.css">
@@ -153,6 +153,102 @@
       </div>
     </section>
     <!-- End contact-us -->
+
+    <!-- Contact Form Modal Popup -->
+    <style>
+      .modal-backdrop-contact {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1040;
+      }
+      
+      .modal-backdrop-contact.show {
+        display: block;
+      }
+      
+      .modal-content-popup-contact {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+        z-index: 1050;
+        max-width: 500px;
+        width: 90%;
+        text-align: center;
+      }
+      
+      .modal-content-popup-contact.show {
+        display: block;
+      }
+      
+      .modal-content-popup-contact h2 {
+        color: #28a745;
+        font-size: 24px;
+        margin-bottom: 15px;
+        margin-top: 0;
+      }
+      
+      .modal-content-popup-contact p {
+        color: #333;
+        font-size: 16px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+      
+      .modal-content-popup-contact .check-icon {
+        font-size: 60px;
+        color: #28a745;
+        margin-bottom: 20px;
+      }
+      
+      .modal-close-btn-contact {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .modal-close-btn-contact:hover {
+        background-color: #1e7e34;
+      }
+    </style>
+
+    <script>
+      // Initialize modal elements for contact form
+      const contactModal = document.createElement('div');
+      contactModal.className = 'modal-backdrop-contact';
+      document.body.appendChild(contactModal);
+      
+      const contactModalContent = document.createElement('div');
+      contactModalContent.className = 'modal-content-popup-contact';
+      contactModalContent.innerHTML = `
+        <div class="check-icon">✓</div>
+        <h2>Message Sent Successfully!</h2>
+        <p>Thank you for reaching out to us!<br><br>A confirmation email has been sent to your email address. Our team will review your message and get back to you shortly.</p>
+        <button class="modal-close-btn-contact" onclick="location.reload()">Close</button>
+      `;
+      document.body.appendChild(contactModalContent);
+      
+      // Window function to show contact modal (called by jQuery in main.js)
+      window.showContactModalPopup = function() {
+        contactModal.classList.add('show');
+        contactModalContent.classList.add('show');
+      };
+    </script>
 
     <!-- Start  page-footer Section-->
     <?php include("inc/footer-section.php");?>

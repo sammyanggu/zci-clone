@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
         <!-- fav icon -->
-        <link rel="icon" href="assets/images/fav-icon/fav-icon.png">
+        <link rel="icon" href="assets/images-zconnect/logo/z-connect-circle-logo.png">
         
         <!-- bootstarp -->
         <link rel="stylesheet" href="css/vendors/bootstrap.min.css">

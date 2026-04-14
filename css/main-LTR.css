@@ -1951,6 +1951,19 @@ body.rounded-btns .read-more {
   }
 }
 .header-basic .has-sub-menu:hover > .sub-menu {
+  /* Hover behavior disabled - use click-based toggle instead */
+}
+
+.header-basic .has-sub-menu > .menu-link .fa-chevron-down {
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(-90deg);
+}
+
+.header-basic .has-sub-menu.active > .menu-link .fa-chevron-down {
+  transform: rotate(0deg);
+}
+
+.header-basic .has-sub-menu.active > .sub-menu {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);

@@ -47,14 +47,18 @@
               ?>" href="services.php">services<i class="fas"> </i></a>
               </li>
               
-              <li class="menu-item"><a class="menu-link<?php
+              <li class="menu-item has-sub-menu"><a class="menu-link<?php
               // Get the current page name
               $current_page = basename($_SERVER['PHP_SELF']);
               
               if ($current_page == 'contact-us.php') {
                   echo " active";
               }
-              ?>" href="contact-us.php">contact us</a></li>
+              ?>" href="contact-us.php">contact us<i class="fas fa-chevron-down"></i></a>
+                <ul class="sub-menu">
+                  <li><a href="index.php#apply-now">Apply Now</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
           <!-- End Main Menu -->

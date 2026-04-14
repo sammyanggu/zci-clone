@@ -100,47 +100,60 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 <head>
   <style>
-    body { font-family: Arial, sans-serif; color: #333; }
-    .container { max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
-    .header { background-color: #28a745; color: white; padding: 20px; border-radius: 8px 8px 0 0; }
-    .content { padding: 20px; }
-    .field { margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-    .label { font-weight: bold; color: #28a745; }
-    .footer { background-color: #f9f9f9; padding: 20px; border-radius: 0 0 8px 8px; text-align: center; font-size: 12px; color: #666; }
+    body { font-family: 'Jost', Arial, sans-serif; color: #333; background-color: #f5f5f5; margin: 0; padding: 20px; }
+    .container { max-width: 600px; margin: 0 auto; background-color: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .logo-section { background-color: #f9f9f9; padding: 30px 20px; text-align: center; border-bottom: none; }
+    .logo-section img { max-width: 150px; height: auto; border-radius: 50%; }
+    .title-section { background-color: white; padding: 20px; text-align: center; border-bottom: 2px solid #28a745; }
+    .content { padding: 30px 20px; }
+    .field { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+    .field:last-of-type { border-bottom: none; margin-bottom: 0; }
+    .label { font-weight: 700; color: #28a745; display: block; margin-bottom: 5px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .value { color: #333; font-size: 14px; line-height: 1.6; }
+    .value a { color: #28a745; text-decoration: none; }
+    .value a:hover { text-decoration: underline; }
+    .footer { background-color: #f9f9f9; padding: 20px; border-top: 1px solid #eee; text-align: center; font-size: 12px; color: #666; }
+    .footer p { margin: 5px 0; }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <h2>New Job Application - $position</h2>
+    <div class="logo-section" style="pointer-events: none !important;">
+      <img src="cid:z_connect_logo" alt="Z-Connect Logo" role="img" aria-label="Z-Connect Logo" style="border: 0 !important; display: block !important; margin: 0 auto !important; padding: 0 !important; pointer-events: none !important; user-select: none !important; -webkit-user-select: none !important; -moz-user-select: none !important; ms-user-select: none !important; outline: none !important; cursor: default !important; max-width: 150px !important; height: auto !important; -webkit-touch-callout: none !important; -webkit-user-drag: none !important; position: relative !important; z-index: 0 !important;" onmousedown="return false" oncontextmenu="return false" />
+    </div>
+    <div class="title-section">
+      <h3 style="margin: 0; color: #28a745; font-size: 24px; font-weight: 700; text-align: center;">New Application Form</h3>
+      <p style="color: #666; font-size: 14px; margin: 8px 0 0 0; text-align: center;">Position: <strong>$position</strong></p>
     </div>
     <div class="content">
       <div class="field">
-        <span class="label">Applicant Name:</span> $fullName
+        <span class="label">Applicant Name</span>
+        <div class="value">$fullName</div>
       </div>
       <div class="field">
-        <span class="label">Email:</span> <a href="mailto:$email">$email</a>
+        <span class="label">Email Address</span>
+        <div class="value"><a href="mailto:$email">$email</a></div>
       </div>
       <div class="field">
-        <span class="label">Phone:</span> <a href="tel:$phone">$phone</a>
+        <span class="label">Phone Number</span>
+        <div class="value"><a href="tel:$phone">$phone</a></div>
       </div>
       <div class="field">
-        <span class="label">Position Applied For:</span> $position
+        <span class="label">Position Applied For</span>
+        <div class="value">$position</div>
       </div>
       <div class="field">
-        <span class="label">Years of Experience:</span> $experience years
+        <span class="label">Years of Experience</span>
+        <div class="value">$experience years</div>
       </div>
       <div class="field">
-        <span class="label">Resume:</span> $fileName
+        <span class="label">Resume File</span>
+        <div class="value">$fileName</div>
       </div>
       <div class="field">
-        <span class="label">Additional Information:</span>
-        <p>$message</p>
+        <span class="label">Additional Information</span>
+        <div class="value" style="white-space: pre-line;">$message</div>
       </div>
-    </div>
-    <div class="footer">
-      <p>This is an automated email from Z-Connect application form.</p>
-      <p>Application submitted at: " . date('Y-m-d H:i:s') . "</p>
     </div>
   </div>
 </body>
@@ -158,13 +171,15 @@ EOD;
                     ADMIN_NAME
                 );
 
-                // Send to admin
-                $adminResult = $emailHelper->send(
+                // Send to admin with inline logo image
+                $logoPath = '../assets/images-zconnect/logo/z-connect-circle-logo.png';
+                $adminResult = $emailHelper->sendWithInlineImage(
                     ADMIN_EMAIL,
                     ADMIN_NAME,
                     '[Z-Connect] New Job Application - ' . $position,
                     $adminHtmlBody,
-                    '',
+                    $logoPath,
+                    'z_connect_logo',
                     $filePath
                 );
 
@@ -207,3 +222,4 @@ EOD;
 
 echo json_encode($response);
 ?>
+
