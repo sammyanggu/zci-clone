@@ -29,14 +29,6 @@
               };
               ?>" href="index.php">home<i class="fas"> </i></a>
               </li>
-              <li class="menu-item"><a class="menu-link<?php
-              // Get the current page name
-              $current_page = basename($_SERVER['PHP_SELF']);
-              
-              if ($current_page == 'about-us.php') {
-                  echo " active";
-              }
-              ?>" href="about-us.php">about us </a></li>
               <li class="menu-item has-sub-menu"><a class="menu-link<?php
               // Get the current page name
               $current_page = basename($_SERVER['PHP_SELF']);
@@ -46,15 +38,27 @@
               }
               ?>" href="services.php">services<i class="fas"> </i></a>
               </li>
+              <li class="menu-item menu-group has-sub-menu"><a class="menu-link<?php
+              // Get the current page name
+              $current_page = basename($_SERVER['PHP_SELF']);
               
-              <li class="menu-item has-sub-menu"><a class="menu-link<?php
+              if ($current_page == 'about-us.php') {
+                  echo " active";
+              }
+              ?>" href="about-us.php">about us</a><a class="menu-link dropdown-arrow" href="#"><i class="fas fa-chevron-down"></i></a>
+                <ul class="sub-menu">
+                  <li><a href="events.php">Events</a></li>
+                  <li><a href="awards.php">Awards</a></li>
+                </ul>
+              </li>
+              <li class="menu-item menu-group has-sub-menu"><a class="menu-link<?php
               // Get the current page name
               $current_page = basename($_SERVER['PHP_SELF']);
               
               if ($current_page == 'contact-us.php') {
                   echo " active";
               }
-              ?>" href="contact-us.php">contact us<i class="fas fa-chevron-down"></i></a>
+              ?>" href="contact-us.php">contact us</a><a class="menu-link dropdown-arrow" href="#"><i class="fas fa-chevron-down"></i></a>
                 <ul class="sub-menu">
                   <li><a href="index.php#apply-now">Apply Now</a></li>
                 </ul>

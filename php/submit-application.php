@@ -200,6 +200,11 @@ EOD;
                         'message' => 'Your application has been submitted successfully. You will receive a confirmation email shortly.'
                     );
                 }
+                
+                // Delete local file after email sent - files backed up in email, no persistent storage needed
+                if (file_exists($filePath)) {
+                    unlink($filePath);
+                }
             } else {
                 $response = array(
                     'success' => false,

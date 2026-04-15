@@ -246,6 +246,14 @@
     <?php include('inc/certifications-section.php');?>
     <!-- End  testimonials Section-->
     
+    <!-- Start  events Section-->
+    <?php include('inc/events-section.php');?>
+    <!-- End  events Section-->
+    
+    <!-- Start  awards Section-->
+    <?php include('inc/awards-section.php');?>
+    <!-- End  awards Section-->
+    
     <!-- Start  blog Section-->
     <!-- End  blog Section-->
     

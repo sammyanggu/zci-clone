@@ -603,6 +603,35 @@ $(function () {
     );
   }
 
+  //initialize swiper [awards-slider]
+  if ($(".awards-slider").length) {
+    const awardsSlider = new Swiper(".awards-slider", {
+      speed: 600,
+      loop: true,
+      grabCursor: true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 25,
+        },
+      },
+      navigation: {
+        nextEl: ".awards-slider .swiper-button-next",
+        prevEl: ".awards-slider .swiper-button-prev",
+      },
+    });
+  }
+
   /* *******  loading  wow.js  Options ********/
   const wow = new WOW({
     animateClass: "animated",
