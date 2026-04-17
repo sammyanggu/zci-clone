@@ -56,7 +56,6 @@
               <div class="contact-info-card"><i class="bi bi-envelope icon"></i><div class="text-lowercase info email"></div></div>
               
               <div class="contact-info-card"><i class="bi bi-geo-alt icon"></i><span class="info">Block 32 Lot 2 Jasmin Street,<br>T.S. Cruz Subdivision,<br>Almanza II, Las Piñas City, 1751 Philippines.</span></div>
-              <div class="contact-info-card"><i class="bi bi-phone icon"></i><a class="info" href="tel:+63288420327">+63 (0)2 8403 0774</a></div>
               <div class="contact-info-card">
                 <div class="social-icons">
                   <div class="sc-wrapper dir-row sc-size-32">

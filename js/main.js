@@ -615,16 +615,6 @@ $(function () {
         delay: 5000,
         disableOnInteraction: false,
       },
-      breakpoints: {
-        576: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 25,
-        },
-      },
       navigation: {
         nextEl: ".awards-slider .swiper-button-next",
         prevEl: ".awards-slider .swiper-button-prev",
@@ -644,7 +634,7 @@ $(function () {
     $().fancybox({
       selector: '[data-fancybox=".show-in-fancybox "]:visible',
       loop: true,
-      buttons: ["zoom", "close"],
+      buttons: false,
     });
   }
 

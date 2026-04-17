@@ -77,10 +77,6 @@
                         <h6 class="content-title">email:</h6><div class="email"></div>
                       </div>
                     </div>
-                    <div class="location-card"><i class="flaticon-phone-call icon"></i>
-                      <div class="card-content">
-                        <h6 class="content-title">phone:</h6><a class="tel link" href="0063284030774">+63 (0)2 8403 0774</a>
-                      </div>
                     </div>
                   </div>
                   <!-- End left hand Div -->

@@ -47,8 +47,8 @@
               }
               ?>" href="about-us.php">about us</a><a class="menu-link dropdown-arrow" href="#"><i class="fas fa-chevron-down"></i></a>
                 <ul class="sub-menu">
-                  <li><a href="events.php">Events</a></li>
-                  <li><a href="awards.php">Awards</a></li>
+                  <li><a href="index.php#events">Events</a></li>
+                  <li><a href="index.php#awards">Awards</a></li>
                 </ul>
               </li>
               <li class="menu-item menu-group has-sub-menu"><a class="menu-link<?php
