@@ -1911,7 +1911,7 @@ body.rounded-btns .read-more {
     align-items: center;
     justify-content: flex-start;
     width: auto;
-    padding: 0.75rem 0 0.75rem 1rem;
+    padding: 0.75rem 0 0.75rem 0;
     color: var(--clr-main);
     line-height: normal;
     white-space: nowrap;
@@ -2014,6 +2014,7 @@ body.rounded-btns .read-more {
     overflow: hidden;
     max-height: 0;
     visibility: hidden;
+    width: 100%;
   }
   .header-basic .has-sub-menu.show > .sub-menu {
     overflow: visible;
@@ -2027,18 +2028,22 @@ body.rounded-btns .read-more {
 }
 @media (max-width: 1199px) {
   .header-basic .has-sub-menu > .sub-menu .sub-menu-item {
-    padding-left: 2rem;
-    padding-right: 1rem;
+    padding: 0;
   }
 }
 .header-basic .has-sub-menu > .sub-menu .sub-menu-link {
   line-height: unset;
   color: var(--clr-main);
-  padding: 1rem;
-  padding-left: 0;
+  padding: 1rem 1rem 1rem 0;
   display: block;
   font-weight: bold;
 }
+@media (max-width: 1199px) {
+  .header-basic .has-sub-menu > .sub-menu .sub-menu-link {
+    padding: 0.75rem 1rem;
+  }
+}
+
 .header-basic .has-sub-menu > .sub-menu .sub-menu-link.active, .header-basic .has-sub-menu > .sub-menu .sub-menu-link:hover {
   color: var(--clr-main);
   transform: translate(0.25rem, 0);
@@ -2050,7 +2055,7 @@ body.rounded-btns .read-more {
 @media (max-width: 1199px) {
   .header-basic .has-sub-menu > .sub-menu .sub-menu-link {
     line-height: unset;
-    padding: 0.75rem 1rem 0.75rem 2rem !important;
+    padding: 0.75rem 1rem;
   }
 }
 .header-basic .has-sub-menu:hover > .sub-menu {

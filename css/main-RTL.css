@@ -2009,14 +2009,13 @@ body.rounded-btns .read-more {
 }
 @media (max-width: 1199px) {
   .header-basic .has-sub-menu > .sub-menu .sub-menu-item {
-    padding-left: 1rem;
+    padding: 0;
   }
 }
 .header-basic .has-sub-menu > .sub-menu .sub-menu-link {
   line-height: unset;
   color: var(--clr-main);
-  padding: 1rem;
-  padding-left: 0;
+  padding: 1rem 1rem 1rem 0;
   display: block;
   font-weight: bold;
 }
@@ -2031,7 +2030,7 @@ body.rounded-btns .read-more {
 @media (max-width: 1199px) {
   .header-basic .has-sub-menu > .sub-menu .sub-menu-link {
     line-height: unset;
-    padding: 1rem 1rem 1rem 0rem !important;
+    padding: 0.75rem 1rem;
   }
 }
 .header-basic .has-sub-menu:hover > .sub-menu {
