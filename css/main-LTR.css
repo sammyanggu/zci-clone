@@ -35,8 +35,8 @@
   --clr-main: #1073ac;
   --clr-main-rgb: 16, 115, 172;
   /*================  header-color values */
-  --clr-header: #fcfc3a;
-  --clr-header-rgb: 252, 252, 58;
+  --clr-header: #ffffff;
+  --clr-header-rgb: 255, 255, 255;
   /*================  accent-color values */
   --clr-accent: #0d1857;
   --clr-accent-rgb: 13, 24, 87;
@@ -1791,8 +1791,8 @@ body.rounded-btns .read-more {
 }
 .header-basic .header-logo .logo-img {
   display: block;
-  max-width: 4rem;
-  max-height: calc(90px - 10px);
+  max-width: 13rem;
+  max-height: 80px;
   transition: all 0.5s ease-in-out 0s;
 }
 .header-basic .header-logo .logo-img.light-logo {

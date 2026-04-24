@@ -202,12 +202,6 @@
         line-height: 1.5;
       }
       
-      .modal-content-popup-contact .check-icon {
-        font-size: 60px;
-        color: #28a745;
-        margin-bottom: 20px;
-      }
-      
       .modal-close-btn-contact {
         background-color: #28a745;
         color: white;
@@ -233,7 +227,6 @@
       const contactModalContent = document.createElement('div');
       contactModalContent.className = 'modal-content-popup-contact';
       contactModalContent.innerHTML = `
-        <div class="check-icon">✓</div>
         <h2>Message Sent Successfully!</h2>
         <p>Thank you for reaching out to us!<br><br>A confirmation email has been sent to your email address. Our team will review your message and get back to you shortly.</p>
         <button class="modal-close-btn-contact" onclick="location.reload()">Close</button>

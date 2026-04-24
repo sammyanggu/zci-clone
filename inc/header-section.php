@@ -17,7 +17,7 @@
       <!-- Begin Main Menu -->
       <div class="container">
         <nav class="menu-navbar">
-          <div class="header-logo"><a class="logo-link" href="https://zconnect.ph"><img class="logo-img light-logo" loading="lazy" src="assets/images-zconnect/logo/z-connect-circle-logo.png" alt="Z-Connect logo"/><img class="logo-img dark-logo" loading="lazy" src="assets/images-zconnect/logo/z-connect-circle-logo.png" alt="logo"/></a></div>
+          <div class="header-logo"><a class="logo-link" href="https://zconnect.ph"><img class="logo-img light-logo" loading="lazy" src="assets/images-zconnect/logo/zconnect-rect-trans-logo.png" alt="Z-Connect logo"/><img class="logo-img dark-logo" loading="lazy" src="assets/images-zconnect/logo/zconnect-rect-trans-logo.png" alt="logo"/></a></div>
           <div class="links menu-wrapper">
             <ul class="list-js links-list">
               <li class="menu-item has-sub-menu"><a class="menu-link<?php

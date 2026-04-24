@@ -229,12 +229,6 @@
         line-height: 1.5;
       }
       
-      .modal-content-popup .check-icon {
-        font-size: 60px;
-        color: #28a745;
-        margin-bottom: 20px;
-      }
-      
       .modal-close-btn {
         background-color: #28a745;
         color: white;
@@ -262,7 +256,6 @@
       const modalContent = document.createElement('div');
       modalContent.className = 'modal-content-popup';
       modalContent.innerHTML = `
-        <div class="check-icon">✓</div>
         <h2>Application Submitted!</h2>
         <p>Thank you for your interest in joining our team!<br><br>A confirmation email has been sent to your email address. Please check your Gmail inbox for further details.</p>
         <button class="modal-close-btn" onclick="location.reload()">Close</button>

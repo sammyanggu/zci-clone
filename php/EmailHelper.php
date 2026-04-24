@@ -298,9 +298,8 @@ class EmailHelper {
       <p>Dear $userName,</p>
       <p>Thank you for contacting <span class="highlight">Z-Connect</span>! We have successfully received your message and truly appreciate you taking the time to reach out to us.</p>
       <p>Our dedicated team will carefully review your inquiry and get back to you as soon as possible, typically within <span class="highlight">24-48 hours</span>.</p>
-      <p><strong>In the meantime, if you have any urgent questions:</strong></p>
+      <p><strong>If you need anything else, please reach us at:</strong></p>
       <p style="margin-left: 20px;">
-        📞 Phone: +63 (0)2 8403 0774<br>
         📧 Email: hr-ms@zconnect.ph
       </p>
       <p>We look forward to working with you!</p>
