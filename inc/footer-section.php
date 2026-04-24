@@ -53,7 +53,7 @@
             <h2 class=" footer-col-title">contact information</h2>
             
             <div class="footer-col-content-wrapper">       
-              <div class="contact-info-card"><i class="bi bi-envelope icon"></i><div class="text-lowercase info email"></div></div>
+              <div class="contact-info-card"><i class="bi bi-envelope icon"></i><a class="text-lowercase info email" href="mailto:hr-ms@zconnect.ph">hr-ms@zconnect.ph</a></div>
               
               <div class="contact-info-card"><i class="bi bi-geo-alt icon"></i><span class="info">Block 32 Lot 2 Jasmin Street,<br>T.S. Cruz Subdivision,<br>Almanza II, Las Piñas City, 1751 Philippines.</span></div>
               <div class="contact-info-card">

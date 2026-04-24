@@ -41,7 +41,7 @@
         
         <!-- main-LTR -->
         <link rel="stylesheet" href="css/main-LTR.css">
-        <title>Z-Connect | Connecting Solutions</title>
+        <title>Z-Connect</title>
   </head>
   <body>
   
@@ -170,7 +170,7 @@
                   </div>
                   <div class="col-10 col-md-8 col-lg-6">
                     <p class="slide-subtitle">
-                      Reduction of manpower and maintenance needed to run your building with an efficiency beyond dreams by harnessing the power of AI.  
+                      Z-Connect Inc. provides managed IT services that ensure systems run smoothly through proactive monitoring, maintenance, and responsive support. Their reliable service helps businesses minimize downtime, boost efficiency, and focus on growth.
                     </p>
                   </div>
                   <div class="col-12">

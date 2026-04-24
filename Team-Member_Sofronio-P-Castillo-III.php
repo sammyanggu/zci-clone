@@ -41,7 +41,7 @@
         
         <!-- main-LTR -->
         <link rel="stylesheet" href="css/main-LTR.css">
-        <title>Z-Connect   |   RJEN   -   Team Member Sofronio P. Castillo III</title>
+        <title>Z-Connect</title>
   </head>
   <body> 
 

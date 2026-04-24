@@ -144,17 +144,21 @@ $(function () {
   hasSubMenu.on("click", function (e) {
     e.stopPropagation();
     if (!(main_window.innerWidth() > 1199)) {
-      $(this).children(".sub-menu").slideToggle();
+      // Only toggle if clicking on dropdown arrow or the menu item with submenu
+      const $subMenu = $(this).find(".sub-menu");
+      if ($subMenu.length) {
+        $(this).toggleClass("show");
+      }
     }
   });
 
   /* ******* Start Smooth Scrolling To page sections Area********/
-  $(".landing-page-demo .menu-navbar .menu-link").on("click", function (e) {
+  $(".landing-page-demo .menu-navbar .menu-link, .landing-page-demo .menu-navbar .menu-text").on("click", function (e) {
     const link = $(this).attr("href");
     let currentMainNavHeight = navMain.innerHeight();
-    if (link.charAt(0) === "#") {
+    if (link && link.charAt(0) === "#") {
       e.preventDefault();
-      const target = this.hash;
+      const target = this.hash || link;
       $(root).animate(
         {
           scrollTop: $(target).offset().top - currentMainNavHeight + 1,
@@ -195,7 +199,7 @@ $(function () {
           500,
           function() {
             // Close the dropdown after scrolling
-            $(".header-basic .has-sub-menu.active").removeClass("active");
+            $(".header-basic .has-sub-menu.active").removeClass("active").removeClass("show");
             
             // Close the mobile menu
             if ($(".menu-wrapper").hasClass("show")) {
@@ -211,26 +215,46 @@ $(function () {
   });
 
   /* ******* Manual Click-based Dropdown Toggle ********/
-  $(".header-basic .menu-link").on("click", function (e) {
+  $(".header-basic .menu-group .dropdown-arrow").on("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    
     const menuItem = $(this).closest(".has-sub-menu");
     const hasActualSubMenu = menuItem.find(".sub-menu").length > 0;
     
     // Check if this menu item has an actual sub-menu element
     if (menuItem.length && hasActualSubMenu) {
+      // Close other open submenus
+      $(".header-basic .has-sub-menu.active").not(menuItem).removeClass("active").removeClass("show");
+      
+      // Toggle active and show classes on clicked menu item
+      menuItem.toggleClass("active");
+      menuItem.toggleClass("show");
+    }
+  });
+
+  // Also handle clicks on menu-text for mobile
+  $(".header-basic .menu-text").on("click", function (e) {
+    const menuItem = $(this).closest(".has-sub-menu");
+    const hasActualSubMenu = menuItem.find(".sub-menu").length > 0;
+    
+    if (menuItem.length && hasActualSubMenu) {
       e.preventDefault();
+      e.stopPropagation();
       
       // Close other open submenus
-      $(".header-basic .has-sub-menu.active").not(menuItem).removeClass("active");
+      $(".header-basic .has-sub-menu.active").not(menuItem).removeClass("active").removeClass("show");
       
-      // Toggle active class on clicked menu item
+      // Toggle active and show classes on clicked menu item
       menuItem.toggleClass("active");
+      menuItem.toggleClass("show");
     }
   });
 
   // Close dropdown when clicking outside
   $(document).on("click", function (e) {
     if (!$(e.target).closest(".has-sub-menu").length) {
-      $(".header-basic .has-sub-menu.active").removeClass("active");
+      $(".header-basic .has-sub-menu.active").removeClass("active").removeClass("show");
     }
   });
 
@@ -615,6 +639,7 @@ $(function () {
         delay: 5000,
         disableOnInteraction: false,
       },
+      mousewheel: true,
       navigation: {
         nextEl: ".awards-slider .swiper-button-next",
         prevEl: ".awards-slider .swiper-button-prev",
@@ -816,10 +841,10 @@ document.addEventListener("DOMContentLoaded", function() {
   emailElements.forEach(function(element) {
     /* var user = element.getAttribute('data-user');
     var domain = element.getAttribute('data-domain');*/
-	var user = "web-sales";
-	var domain = "zconnect.ph";
+  	var user = "hr-ms";
+  	var domain = "zconnect.ph";
     var email = obfuscateEmail(user, domain);
-    element.innerHTML = '<a class"email link" href="mailto:' + email + '">' + email + '</a>';
+    element.innerHTML = '<a class="email link" href="mailto:' + email + '">' + email + '</a>';
   });
 });
 

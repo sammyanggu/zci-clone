@@ -301,7 +301,7 @@ class EmailHelper {
       <p><strong>In the meantime, if you have any urgent questions:</strong></p>
       <p style="margin-left: 20px;">
         📞 Phone: +63 (0)2 8403 0774<br>
-        📧 Email: web-sales@zconnect.ph
+        📧 Email: hr-ms@zconnect.ph
       </p>
       <p>We look forward to working with you!</p>
       <p style="margin-top: 30px;">
@@ -417,7 +417,7 @@ EOD;
       <p style="margin-top: 25px;">If you have any questions about your application status, please don't hesitate to contact us:</p>
       <p style="margin-left: 20px;">
         📞 Phone: +63 (0)2 8403 0774<br>
-        📧 Email: web-sales@zconnect.ph
+        📧 Email: hr-ms@zconnect.ph
       </p>
       
       <p style="margin-top: 25px;">

@@ -67,30 +67,31 @@
             <div class="info-section">
               <div class="row">
 
-                  <!-- Begin left hand Div -->
-                  <div class="col-12 col-lg-5 info-panel">
-                    <h4 class="location-title">Las Piñas</h4>
-                    <div class="line-on-side"></div>
-                    <p class="location-address">Block 32 Lot 2 Jasmin Street,<br>T.S. Cruz Subdivision,<br>Almanza II,<br>Las Piñas City, 1751<br>Philippines.</p>
-                    <div class="location-card"><i class="flaticon-email icon"></i>
-                      <div class="card-content">
-                        <h6 class="content-title">email:</h6><div class="email"></div>
+                  <!-- Begin Contact Info Section -->
+                  <!-- Left hand Div -->
+                  <div class="col-12 col-lg-6 contact-info-container">
+                    <div class="info-panel">
+                      <h4 class="location-title">Las Piñas</h4>
+                      <div class="line-on-side"></div>
+                      <p class="location-address">Block 32 Lot 2 Jasmin Street,<br>T.S. Cruz Subdivision,<br>Almanza II,<br>Las Piñas City, 1751<br>Philippines.</p>
+                      <div class="location-card"><i class="flaticon-email icon"></i>
+                        <div class="card-content">
+                          <h6 class="content-title">email:</h6><div class="email"></div>
+                        </div>
                       </div>
                     </div>
-                    </div>
                   </div>
-                  <!-- End left hand Div -->
-                  
-                  <!-- Begin right hand Div -->
-                  <div class="map-box col-12 col-lg-7 info-panel-map-side">
-                    <h4 class="location-title">Find us on Google Maps</h4>
-                    <div class="line-on-side"></div>
-                    <div class="mapouter">
+                    
+                  <!-- Right hand Div -->
+                  <div class="col-12 col-lg-6">
+                    <div class="map-box info-panel-map-side">
+                      <div class="line-on-side"></div>
+                      <div class="mapouter">
                         <iframe class="map-iframe" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d483.01047062100656!2d121.0210498!3d14.4223346!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1863618e9ed%3A0xb41765a28c683954!2sZ-Connect%20Inc.!5e0!3m2!1sen!2sph!4v1738547926601!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                       </div>
                     </div>
                   </div>
-                  <!-- End right hand Div -->
+                  <!-- End Contact Info Section -->
 
               </div>
             </div>

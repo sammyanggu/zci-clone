@@ -3,7 +3,7 @@
       <div class="container">
         <div class="sec-heading centered">
           <div class="content-area"><span class="pre-title wow fadeInUp" data-wow-delay=".2s">certifications</span>
-            <h2 class="title wow fadeInUp" data-wow-delay=".4s">our <span class='hollow-text'>certifications</span></h2>
+            <h2 class="title wow fadeInUp" data-wow-delay=".4s"><span class='hollow-text'>certifications</span></h2>
           </div>
         </div>
         <div class="row d-flex align-items-center">
@@ -172,7 +172,7 @@
                           class="img-fluid"
                           loading="lazy"
                           src="assets/images-zconnect/company-certs/AWS_reseller-cert_LILIN.png"
-                          alt="AWS LILIN ^Reseller Certificate"
+                          alt="AWS LILIN Reseller Certificate"
                           data-bs-toggle="modal"
                           data-bs-target="#certificateModal"
                         />

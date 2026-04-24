@@ -35,7 +35,7 @@
         
         <!-- main-LTR -->
         <link rel="stylesheet" href="css/main-LTR.css">
-        <title>Z-Connect   |   service details</title>
+        <title>Z-Connect</title>
   </head>
   <body> 
   

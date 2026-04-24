@@ -358,7 +358,7 @@ class EmailHelperAlternative {
         <div class="contact-info">
           <p><strong>Questions or need help?</strong></p>
           <p>📞 <strong>+63 (0)2 8403 0774</strong></p>
-          <p>📧 <a href="mailto:web-sales@zconnect.ph" style="color: #007bff; text-decoration: none;">web-sales@zconnect.ph</a></p>
+          <p>📧 <a href="mailto:hr-ms@zconnect.ph" style="color: #007bff; text-decoration: none;">hr-ms@zconnect.ph</a></p>
         </div>
       </div>
     </div>
@@ -669,7 +669,7 @@ EOD;
       <p>Dear $userName,</p>
       <p>Thank you for applying for the <span style="color: #28a745; font-weight: bold;">$position</span> position!</p>
       <p>We have received your application and resume. Our HR team will review and contact you within the next week.</p>
-      <p><strong>Questions?</strong><br>📞 +63 (0)2 8403 0774<br>📧 web-sales@zconnect.ph</p>
+      <p><strong>Questions?</strong><br>📞 +63 (0)2 8403 0774<br>📧 hr-ms@zconnect.ph</p>
     </div>
     <div class="footer">
       <p>© 2024 Z-Connect</p>

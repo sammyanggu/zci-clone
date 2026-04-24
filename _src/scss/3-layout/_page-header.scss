@@ -226,8 +226,11 @@ $padding-for-hero-section: $link-height;
       overflow-x: hidden;
       background-color: $clr-header;
     }
+    @include screen-md {
+      width: 65%;
+    }
     @include screen-sm {
-      width: 75%;
+      width: 85%;
     }
   }
 
@@ -297,27 +300,33 @@ $padding-for-hero-section: $link-height;
       #{$start-direction}: 0;
       margin: 0;
       padding: 1rem 1.5rem;
-      transform: translateY(4rem);
+      transform: translateY(0);
+      max-height: 0;
+      overflow: hidden;
       visibility: hidden;
       opacity: 0;
       z-index: 15000;
       background-color: $clr-header;
       @include ma-transition(all, 0.3s);
 
+      @include screen-xs {
+        min-width: unset;
+        width: 100%;
+      }
+
       @include screen-lg {
         position: static;
-        display: none;
-        visibility: visible;
-        opacity: 1;
         border: none;
         box-shadow: none;
         padding: 0;
         transform: translateY(0);
         transition: none;
+        overflow: visible;
       }
 
       .sub-menu-item {
         padding: 0;
+        display: block;
         @include screen-lg {
           padding-#{$start-direction}: 1rem;
         }
@@ -328,6 +337,8 @@ $padding-for-hero-section: $link-height;
         color: $clr-main;
         padding: 1rem;
         padding-#{$start-direction}: 0;
+        display: block;
+        font-weight: bold;
         @extend %active-item-indecator;
 
         &.active,
@@ -344,6 +355,16 @@ $padding-for-hero-section: $link-height;
           line-height: unset;
           padding: 1rem 1rem 1rem 0rem !important;
         }
+      }
+    }
+
+    &.show > .sub-menu {
+      max-height: 500px;
+      visibility: visible;
+      opacity: 1;
+
+      @include screen-lg {
+        max-height: 9999px;
       }
     }
 

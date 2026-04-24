@@ -38,29 +38,31 @@
               }
               ?>" href="services.php">services<i class="fas"> </i></a>
               </li>
-              <li class="menu-item menu-group has-sub-menu"><a class="menu-link<?php
+              <li class="menu-item menu-group has-sub-menu"><span class="menu-text<?php
               // Get the current page name
               $current_page = basename($_SERVER['PHP_SELF']);
               
               if ($current_page == 'about-us.php') {
                   echo " active";
               }
-              ?>" href="about-us.php">about us</a><a class="menu-link dropdown-arrow" href="#"><i class="fas fa-chevron-down"></i></a>
+              ?>">about us</span><a class="menu-link dropdown-arrow" href="#"><i class="fas fa-chevron-down"></i></a>
                 <ul class="sub-menu">
-                  <li><a href="index.php#events">Events</a></li>
-                  <li><a href="index.php#awards">Awards</a></li>
+                  <li class="sub-menu-item"><a class="sub-menu-link" href="index.php#about">About</a></li>
+                  <li class="sub-menu-item"><a class="sub-menu-link" href="index.php#events">Events</a></li>
+                  <li class="sub-menu-item"><a class="sub-menu-link" href="index.php#awards">Awards</a></li>
                 </ul>
               </li>
-              <li class="menu-item menu-group has-sub-menu"><a class="menu-link<?php
+              <li class="menu-item menu-group has-sub-menu"><span class="menu-text<?php
               // Get the current page name
               $current_page = basename($_SERVER['PHP_SELF']);
               
               if ($current_page == 'contact-us.php') {
                   echo " active";
               }
-              ?>" href="contact-us.php">contact us</a><a class="menu-link dropdown-arrow" href="#"><i class="fas fa-chevron-down"></i></a>
+              ?>">contact us</span><a class="menu-link dropdown-arrow" href="#"><i class="fas fa-chevron-down"></i></a>
                 <ul class="sub-menu">
-                  <li><a href="index.php#apply-now">Apply Now</a></li>
+                  <li class="sub-menu-item"><a class="sub-menu-link" href="index.php#take-action">Inquire</a></li>
+                  <li class="sub-menu-item"><a class="sub-menu-link" href="index.php#apply-now">Apply Now</a></li>
                 </ul>
               </li>
             </ul>

@@ -191,19 +191,22 @@ EOD;
                         'success' => true,
                         'message' => 'Thank you for your application! We have received your submission and will review it shortly. You will receive a confirmation email within the next few minutes.'
                     );
+
+                    // Delete local file after admin email successfully sent
+                    if (file_exists($filePath)) {
+                        @unlink($filePath);
+                    }
                 } else {
-                    // Even if admin email fails, send confirmation
+                    // Even if admin email fails, send confirmation to applicant
                     $emailHelper->sendApplicationConfirmation($email, $fullName, $position);
                     
                     $response = array(
                         'success' => true,
-                        'message' => 'Your application has been submitted successfully. You will receive a confirmation email shortly.'
+                        'message' => 'Your application has been submitted successfully. We have received your application and will review it shortly.'
                     );
-                }
-                
-                // Delete local file after email sent - files backed up in email, no persistent storage needed
-                if (file_exists($filePath)) {
-                    unlink($filePath);
+
+                    // DO NOT delete the uploaded resume here: keep it so queued email processors
+                    // or an admin can retrieve the file and re-send the application with attachment.
                 }
             } else {
                 $response = array(

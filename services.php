@@ -35,7 +35,7 @@
         
         <!-- main-LTR -->
         <link rel="stylesheet" href="css/main-LTR.css">
-        <title> Services of Z-Connect - Connecting Solutions</title>
+        <title>Z-Connect | Services</title>
   </head>
   <body>
     <!--Start Page Header-->

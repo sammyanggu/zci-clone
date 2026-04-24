@@ -35,7 +35,7 @@
         
         <!-- main-LTR -->
         <link rel="stylesheet" href="css/main-LTR.css">
-        <title>Application Form - Z-Connect</title>
+        <title>Application - Z-Connect</title>
   </head>
   <body>
   
@@ -83,11 +83,38 @@
                       <label for="position" class="form-label">Position Applying For <span style="color: red;">*</span></label>
                       <select class="form-control" id="position" name="position" required>
                         <option value="">Select a position</option>
-                        <option value="IT Solutions">IT Solutions</option>
-                        <option value="Structured Cabling">Structured Cabling</option>
-                        <option value="Building Automation">Building Automation</option>
-                        <option value="Network Support">Network Support</option>
-                        <option value="Other">Other</option>
+                        <optgroup label="Sales Department">
+                          <option value="Sr. Account Manager">Sr. Account Manager</option>
+                          <option value="Account Manager">Account Manager</option>
+                          <option value="Sales Consultant">Sales Consultant</option>
+                        </optgroup>
+                        <optgroup label="HR Department">
+                          <option value="HR Manager">HR Manager</option>
+                          <option value="HRIS Manager">HRIS Manager</option>
+                          <option value="Benefits Officer/Resource Manager">Benefits Officer/Resource Manager</option>
+                          <option value="Recruitment Officer">Recruitment Officer</option>
+                          <option value="HR Associate">HR Associate</option>
+                        </optgroup>
+                        <optgroup label="Technical Department">
+                          <option value="Project Manager">Project Manager</option>
+                        </optgroup>
+                        <optgroup label="Network Department">
+                          <option value="Network Engineer">Network Engineer</option>
+                        </optgroup>
+                        <optgroup label="Admin Department">
+                          <option value="Admin/Finance Manager">Admin/Finance Manager</option>
+                          <option value="Liaison Officer/Accounting Staff">Liaison Officer/Accounting Staff</option>
+                          <option value="Accounting Staff">Accounting Staff</option>
+                          <option value="Field Collection Officer">Field Collection Officer</option>
+                          <option value="Purchasing Officer">Purchasing Officer</option>
+                          <option value="Purchasing/Logistics">Purchasing/Logistics</option>
+                        </optgroup>
+                        <optgroup label="Documentation Department">
+                          <option value="Technical Drafter">Technical Drafter</option>
+                          <option value="Warehouse Personnel">Warehouse Personnel</option>
+                          <option value="Driver">Driver</option>
+                          <option value="Utility">Utility</option>
+                        </optgroup>
                       </select>
                       <small class="text-danger d-none" id="positionError">Please select a position</small>
                     </div>

@@ -5,7 +5,7 @@
           <div class="sec-heading centered mb-0">
             <div class="content-area"><span class="pre-title wow fadeInUp" data-wow-delay=".2s">contact us</span>
               <h2 class="title wow fadeInUp" data-wow-delay=".4s">get in touch with us</h2>
-              <p class="wow fadeInUp quote" data-wow-delay=".6s">"A journey of a thousand miles, begins with a single step"</p>
+              <p class="wow fadeInUp quote text-white" data-wow-delay=".6s">"A journey of a thousand miles, begins with a single step"</p>
               <p class="wow fadeInUp attribution">by Lao Tzu (from the Tao Te Ching text)</p>
             </div>
           </div>
